@@ -1,4 +1,4 @@
-# Author: Jeroen de Haas <jah.dehaas@avans.nl>
+ # Author: Jeroen de Haas <jah.dehaas@avans.nl>
 cmake_policy(SET CMP0048 NEW)
 cmake_minimum_required(VERSION 3.8)
 
