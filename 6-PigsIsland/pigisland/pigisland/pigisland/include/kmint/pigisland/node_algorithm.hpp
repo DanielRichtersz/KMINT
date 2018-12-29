@@ -35,7 +35,9 @@ map::map_node const &find_random_mooring_place(map::map_graph const &graph);
 ///
 map::map_node const &find_shark_resting_place(map::map_graph const &graph);
 
-} // namespace pigisland
+}
+void RemoveMapNodeFromVector(std::vector<kmint::map::map_node> &unvisited, kmint::map::map_node & currentNode);
+// namespace pigisland
 } // namespace kmint
 
 #endif /* PIGISLAND_NODE_ALGORITHM_HPP */
