@@ -38,7 +38,7 @@ namespace kmint {
 		std::vector<map::map_node> unvisited;
 		std::vector<map::map_node> reversePath;
 
-		auto *currentNode = startNode;
+		auto &currentNode = startNode;
 
 
 		for (auto it = graph.begin(); it != graph.end(); ++it) {
@@ -58,10 +58,10 @@ namespace kmint {
 		//While there are still unvisited rooms
 		while (!unvisited.empty()) {
 			//To show what rooms are visited by the algorithm
-			currentNode->tagged(true);
+			currentNode.tagged(true);
 
 			//For each edge on current node 
-			for (auto edgeIt = currentNode->begin(); edgeIt != currentNode->end(); ++edgeIt) {
+			for (auto edgeIt = currentNode.begin(); edgeIt != currentNode.end(); ++edgeIt) {
 				
 				//Set maxvalue to cost
 				int currentCost = std::numeric_limits<int>::max();
@@ -105,7 +105,7 @@ namespace kmint {
 					//And if currentcost is less than lowestcost
 					if (x.second.second < lowestCost) {
 						//Replace currentNode
-						currentNode = &x.first;
+						currentNode = x.first;
 						lowestCost = x.second.second;
 					}
 				}
@@ -118,14 +118,14 @@ namespace kmint {
 
 		//TODO: Clean discovery animations ("Tagged")
 
-		map::map_node *reverse = &endRoom;
+		map::map_node &reverse = endRoom;
 		while (true) {
 
 			//TODO: Draw route animation
 
-			reversePath.push_back(*reverse);
-			auto& reverseCost = cost[*reverse];
-			reverse = &reverseCost.first;
+			reversePath.push_back(reverse);
+			auto& reverseCost = cost[reverse];
+			reverse = reverseCost.first;
 		}
 
 		std::reverse(reversePath.begin(), reversePath.end());
