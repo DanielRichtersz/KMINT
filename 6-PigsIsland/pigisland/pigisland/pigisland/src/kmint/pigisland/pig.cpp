@@ -17,7 +17,7 @@ math::vector2d random_vector() {
 } // namespace
 
 pig::pig(math::vector2d location)
-	: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() } {}
+	: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FDEPig(FDEPig{}) {}
       
 
 void pig::act(delta_time dt) {

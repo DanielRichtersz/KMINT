@@ -29,108 +29,110 @@ namespace kmint {
 		int waiting_time(map::map_node const &node) {
 			return static_cast<int>(node[0].weight());
 		}
-
+		
 	} // namespace pigisland
 
-	std::vector<map::map_node> DijkstraShortestPath(map::map_graph const &graph, map::map_node& startNode, map::map_node &endRoom) {
-		std::map<map::map_node, std::pair<map::map_node, int>> cost;
-		std::vector<map::map_node> visited;
-		std::vector<map::map_node> unvisited;
-		std::vector<map::map_node> reversePath;
+	//std::vector<map::map_node> DijkstraShortestPath(map::map_graph const &graph, map::map_node& startNode, map::map_node &endRoom) {
+	//	std::map<map::map_node, std::pair<map::map_node, int>> cost;
+	//	std::vector<map::map_node> visited;
+	//	std::vector<map::map_node> unvisited;
+	//	std::vector<map::map_node> reversePath;
 
-		auto &currentNode = startNode;
-
-
-		for (auto it = graph.begin(); it != graph.end(); ++it) {
-			auto &node = *it;
-			if (node.location != startNode.location) {
-				unvisited.push_back(node);
-			}
-		}
+	//	auto &currentNode = startNode;
 
 
-		//Add startroom to visited
-		visited.push_back(startNode);
+	//	for (auto it = graph.begin(); it != graph.end(); ++it) {
+	//		auto &node = *it;
+	//		if (node.location != startNode.location) {
+	//			unvisited.push_back(&node);
+	//		}
+	//	}
 
-		//Add startroom to cost with a cost of 0
-		cost[startNode] = std::pair{ startNode, 0 };
 
-		//While there are still unvisited rooms
-		while (!unvisited.empty()) {
-			//To show what rooms are visited by the algorithm
-			currentNode.tagged(true);
+	//	//Add startroom to visited
+	//	visited.push_back(startNode);
 
-			//For each edge on current node 
-			for (auto edgeIt = currentNode.begin(); edgeIt != currentNode.end(); ++edgeIt) {
-				
-				//Set maxvalue to cost
-				int currentCost = std::numeric_limits<int>::max();
+	//	//Add startroom to cost with a cost of 0
+	//	cost[startNode] = std::pair{ startNode, 0 };
 
-				//Get connected room
-				auto &connectedNode = edgeIt->to();
-				
-				//Calculate cost
-				currentCost = cost[currentNode].second + edgeIt->weight;
+	//	//While there are still unvisited rooms
+	//	while (!unvisited.empty()) {
+	//		//To show what rooms are visited by the algorithm
+	//		currentNode.tagged(true);
 
-				//Compare costs
-				//-Find node in cost map
-				std::map<map::map_node, std::pair<map::map_node, int>>::iterator costIt = cost.find(connectedNode);
+	//		//For each edge on current node 
+	//		for (auto edgeIt = currentNode.begin(); edgeIt != currentNode.end(); ++edgeIt) {
+	//			
+	//			//Set maxvalue to cost
+	//			int currentCost = std::numeric_limits<int>::max();
 
-				//-If node exists in cost map
-				if (costIt != cost.end())
-				{
-					//-If cost was higher than current cost, replace
-					if (cost[connectedNode].second > currentCost) {
-						cost[connectedNode] = std::pair{ currentNode, currentCost };
-					}
-				}
-				else {
-					//-Else place new in cost map
-					cost[connectedNode] = std::pair{ currentNode, currentCost };
-				}
-			}
+	//			//Get connected room
+	//			auto &connectedNode = edgeIt->to();
+	//			
+	//			//Calculate cost
+	//			currentCost = cost[currentNode].second + edgeIt->weight;
 
-			// Set lowestcost again to maxvalue to compare it with other values
-			int lowestCost = std::numeric_limits<int>::max();
+	//			//Compare costs
+	//			//-Find node in cost map
+	//			std::map<map::map_node, std::pair<map::map_node, int>>::iterator costIt = cost.find(connectedNode);
 
-			//Foreach item pair in cost
-			for (auto costItr = cost.begin(); costItr != cost.end(); ++costItr) {
-				//If the value is lower than lowestCost and the room isn't in visited anymore, 
-				//set currentRoom to x.key and lowestCost to the cost of x.key
-				//x is a node
-				auto &x = *costItr;
+	//			//-If node exists in cost map
+	//			if (costIt != cost.end())
+	//			{
+	//				//-If cost was higher than current cost, replace
+	//				if (cost[connectedNode].second > currentCost) {
+	//					cost[connectedNode] = std::pair{ currentNode, currentCost };
+	//				}
+	//			}
+	//			else {
+	//				//-Else place new in cost map
+	//				cost[connectedNode] = std::pair{ currentNode, currentCost };
+	//			}
+	//		}
 
-				//-If node doesnt exist in cosstmap
-				if (std::find(visited.begin(), visited.end(), x.second.first) == visited.end()) {
-					//And if currentcost is less than lowestcost
-					if (x.second.second < lowestCost) {
-						//Replace currentNode
-						currentNode = x.first;
-						lowestCost = x.second.second;
-					}
-				}
-			}
+	//		// Set lowestcost again to maxvalue to compare it with other values
+	//		int lowestCost = std::numeric_limits<int>::max();
 
-			//Remove currentNode and add to visited
-			RemoveMapNodeFromVector(unvisited, currentNode);
-			visited.push_back(currentNode);
-		}
+	//		//Foreach item pair in cost
+	//		for (auto costItr = cost.begin(); costItr != cost.end(); ++costItr) {
+	//			//If the value is lower than lowestCost and the room isn't in visited anymore, 
+	//			//set currentRoom to x.key and lowestCost to the cost of x.key
+	//			//x is a node
+	//			auto &x = *costItr;
 
-		//TODO: Clean discovery animations ("Tagged")
+	//			//-If node doesnt exist in cosstmap
+	//			if (std::find(visited.begin(), visited.end(), x.second.first) == visited.end()) {
+	//				//And if currentcost is less than lowestcost
+	//				if (x.second.second < lowestCost) {
+	//					//Replace currentNode
+	//					//currentNode = x.first;
+	//					auto& a = x.first;
+	//					lowestCost = x.second.second;
+	//				}
+	//			}
+	//		}
 
-		map::map_node &reverse = endRoom;
-		while (true) {
+	//		//Remove currentNode and add to visited
+	//		RemoveMapNodeFromVector(unvisited, currentNode);
+	//		visited.push_back(currentNode);
+	//	}
 
-			//TODO: Draw route animation
+	//	//TODO: Clean discovery animations ("Tagged")
 
-			reversePath.push_back(reverse);
-			auto& reverseCost = cost[reverse];
-			reverse = reverseCost.first;
-		}
+	//	map::map_node &reverse = endRoom;
+	//	while (true) {
 
-		std::reverse(reversePath.begin(), reversePath.end());
-		return reversePath;
-	}
+	//		//TODO: Draw route animation
+
+	//		reversePath.push_back(reverse);
+	//		auto& reverseCost = cost[reverse];
+	//		//reverse = reverseCost.first;
+	//		auto& b = reverseCost.first;
+	//	}
+
+	//	std::reverse(reversePath.begin(), reversePath.end());
+	//	return reversePath;
+	//}
 
 	void RemoveMapNodeFromVector(std::vector<kmint::map::map_node> &vector, kmint::map::map_node & mapNode)
 	{
