@@ -6,7 +6,7 @@ namespace kmint {
 
 		class FDEPig {
 		public:
-			FDEPig() {};
+			FDEPig();
 
 			void setAttractionToShark(float newAttraction) { if (newAttraction >= -1 && newAttraction <= 1) { this->_attractionToShark = newAttraction; }; }
 			float getAttracktionToShark() { return _attractionToShark; }

@@ -15,7 +15,7 @@ void shark::act(delta_time dt) {
 
   //If mag bewegen
   if (to_seconds(t_since_move_) >= waiting_time(node())) {
-
+	  
 	  node(random_adjacent_node(node()));
 
 	  t_since_move_ = from_seconds(0);
