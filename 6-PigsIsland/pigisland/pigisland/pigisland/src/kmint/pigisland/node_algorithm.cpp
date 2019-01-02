@@ -32,7 +32,7 @@ namespace kmint {
 		
 	} // namespace pigisland
 
-	//std::vector<map::map_node> DijkstraShortestPath(map::map_graph const &graph, map::map_node& startNode, map::map_node &endRoom) {
+	//std::vector<map::map_node> DijkstraShortestPath(map::map_graph const &graph, map::map_node& startNode, map::map_node& endRoom) {
 	//	std::map<map::map_node, std::pair<map::map_node, int>> cost;
 	//	std::vector<map::map_node> visited;
 	//	std::vector<map::map_node> unvisited;
@@ -134,14 +134,14 @@ namespace kmint {
 	//	return reversePath;
 	//}
 
-	void RemoveMapNodeFromVector(std::vector<kmint::map::map_node> &vector, kmint::map::map_node & mapNode)
-	{
-		//Remove currentRoom from unvisited and add to visited
-		std::vector<map::map_node>::iterator it = std::find(vector.begin(), vector.end(), mapNode);
-		if (it != vector.end()) {
-			vector.erase(it);
-		}
-	}
+	//void RemoveMapNodeFromVector(std::vector<kmint::map::map_node> &vector, kmint::map::map_node & mapNode)
+	//{
+	//	//Remove currentRoom from unvisited and add to visited
+	//	std::vector<map::map_node>::iterator it = std::find(vector.begin(), vector.end(), mapNode);
+	//	if (it != vector.end()) {
+	//		vector.erase(it);
+	//	}
+	//}
 
 
 

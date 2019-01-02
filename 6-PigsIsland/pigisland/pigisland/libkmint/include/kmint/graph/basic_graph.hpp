@@ -38,6 +38,7 @@ namespace graph {
 template <typename NodeInfo> class basic_graph {
 public:
   //! The associated node type for this graph
+	//Node type is een basic_node
   using node_type = basic_node<NodeInfo>;
 
 private:
@@ -46,12 +47,17 @@ private:
 public:
   //! This type is used for indexing
   using size_type = typename container::size_type;
+
   //! The indexing operator returns a reference to a value of this type.
+  //Oftewel de iterator geeft een reference naar een basic_node
   using value_type = node_type;
+
   //! The type of the iterators returned by \ref basic_graph::begin and \ref
   //! basic_graph::end
+  //Iterator die wrapped de node_type wat basic_node is bij algoritmes
   using node_iterator =
       kmint::util::wrapped_iterator<node_type, typename container::iterator>;
+
   //! The type of the iterators returned by \ref basic_graph::cbegin and \ref
   //! basic_graph::cend.
   using const_node_iterator =
@@ -60,8 +66,10 @@ public:
 
   basic_graph() = default;
   ~basic_graph() = default;
+
   //! basic_graph maintains unique ownership semantics and cannot be copied.
   basic_graph(basic_graph const & /*other*/) = delete;
+
   //! basic_graph maintains unique ownership semantics and cannot be copied.
   basic_graph &operator=(basic_graph const & /*other*/) = delete;
   basic_graph(basic_graph && /*other*/) noexcept = default;

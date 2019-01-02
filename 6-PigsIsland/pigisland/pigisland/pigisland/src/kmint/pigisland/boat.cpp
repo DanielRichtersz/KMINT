@@ -13,10 +13,13 @@ boat::boat(kmint::map::map_graph &g)
 void boat::act(delta_time dt) {
   t_since_move_ += dt;
   if (to_seconds(t_since_move_) >= waiting_time(node())) {
-    node(random_adjacent_node(node()));
+    //node(random_adjacent_node(node()));
+	node(find_random_mooring_place(graph()));
     t_since_move_ = from_seconds(0);
   }
 }
+
+
 
 } // namespace pigisland
 } // namespace kmint
