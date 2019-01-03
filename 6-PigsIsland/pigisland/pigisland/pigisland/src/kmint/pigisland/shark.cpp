@@ -16,8 +16,28 @@ void shark::act(delta_time dt) {
   //If mag bewegen
   if (to_seconds(t_since_move_) >= waiting_time(node())) {
 	  
-	  node(random_adjacent_node(node()));
+	  const map::map_node* nextNode = nullptr;
 
+	  if (destinationNode() == nullptr) {
+		  destinationNode(find_random_mooring_place(graph()));
+	  }
+
+	  while (math::distance(destinationNode()->location(), node().location()) == 0) {
+		  destinationNode(find_random_mooring_place(graph()));
+	  }
+
+	  if (destinationNode() != nullptr) {
+		  std::vector<const map::map_node*> tempVector = DijkstraShortestPath(graph(), &node(), destinationNode());
+		  nextNode = tempVector.at(1);
+	  }
+
+	  //If next node exists, move to that node
+	  if (nextNode != nullptr) {
+		  node(*nextNode);
+	  }
+	  else { //Move to random node, should never happen unless something goes really wrong
+		  node(random_adjacent_node(node()));
+	  }
 	  t_since_move_ = from_seconds(0);
   }
 }

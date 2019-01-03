@@ -29,7 +29,7 @@ namespace kmint {
 		int waiting_time(map::map_node const &node) {
 			return static_cast<int>(node[0].weight());
 		}
-		
+
 		std::vector<const map::map_node*> DijkstraShortestPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endRoom) {
 			std::map<const map::map_node*, std::pair<const map::map_node*, float>> cost;
 			std::vector<const map::map_node*> visited;
@@ -38,6 +38,7 @@ namespace kmint {
 
 			const map::map_node* currentNode = startNode;
 
+			//Add all rooms to unvisited list
 			for (std::size_t i = 0; i < graph.num_nodes(); ++i) {
 				if (&graph[i] != startNode) {
 					unvisited.push_back(&graph[i]);
@@ -59,8 +60,6 @@ namespace kmint {
 
 			//While there are still unvisited rooms
 			while (!unvisited.empty()) {
-				//To show what rooms are visited by the algorithm
-
 				//For each edge on current node 
 				for (auto& edgeIt = currentNode->begin(); edgeIt != currentNode->end(); ++edgeIt) {
 
@@ -71,18 +70,18 @@ namespace kmint {
 					const map::map_node* connectedNode = &edgeIt->to();
 
 					//Calculate cost
-					currentCost = cost[currentNode].second;
+					currentCost = cost[currentNode].second + edgeIt->weight();
 
 					//Compare costs
 					//-Find node in cost map
-					std::map<const map::map_node*, std::pair<const map::map_node*, float>>::iterator costIt = cost.find(connectedNode);
+					std::map<const map::map_node*, std::pair<const map::map_node*, float>>::iterator connectedNodeIt = cost.find(connectedNode);
 
 					//-If node exists in cost map
-					if (costIt != cost.end())
+					if (connectedNodeIt != cost.end())
 					{
 						//-If cost was higher than current cost, replace
-						if (cost[connectedNode].second > currentCost) {
-							cost[connectedNode] = std::pair{ currentNode, currentCost };
+						if (connectedNodeIt->second.second > currentCost) {
+							connectedNodeIt->second = std::pair{ currentNode, currentCost };
 						}
 					}
 					else {
@@ -90,18 +89,19 @@ namespace kmint {
 						cost[connectedNode] = std::pair{ currentNode, currentCost };
 					}
 				}
+
 				// Set lowestcost again to maxvalue to compare it with other values
 				float lowestCost = std::numeric_limits<float>::max();
 
 				//Foreach item pair in cost
-				for (auto costItr = cost.begin(); costItr != cost.end(); ++costItr) {
+				for (auto costPairIt = cost.begin(); costPairIt != cost.end(); ++costPairIt) {
 					//If the value is lower than lowestCost and the room isn't in visited anymore, 
 					//set currentRoom to x.key and lowestCost to the cost of x.key
 					//x is a node
-					auto &x = *costItr;
+					auto &x = *costPairIt;
 
 					//-If node doesnt exist in costmap
-					if (std::find(visited.begin(), visited.end(), x.second.first) == visited.end()) {
+					if (std::find(visited.begin(), visited.end(), costPairIt->first) == visited.end()) {
 						//And if currentcost is less than lowestcost
 						if (x.second.second < lowestCost) {
 							//Replace currentNode
@@ -111,35 +111,31 @@ namespace kmint {
 					}
 				}
 
+				//Remove currentNode from unvisited
 				auto& it = std::find_if(unvisited.begin(), unvisited.end(), [currentNode](const map::map_node* n) { return math::distance(currentNode->location(), n->location()) != 0; });
 
-				//Remove currentNode from unvisited and add to visited
-				bool shouldAddToVisited = !(it == unvisited.end());
-
-				unvisited.erase(it);
-
-				//RemoveMapNodeFromVector(unvisited, currentNode);
-				if (shouldAddToVisited) {
-					visited.push_back(currentNode);
+				if (it != unvisited.end()) {
+					unvisited.erase(it);
 				}
-				else {
+
+				//If currentNode == endNode, break
+				if (math::distance(currentNode->location(), endRoom->location()) == 0) {
 					break;
 				}
+
+				//Add currentNode to visited
+				visited.push_back(currentNode);
 			}
 
-			//TODO: Clean discovery animations ("Tagged")
-
-			const map::map_node *reverse = endRoom;
+			const map::map_node* reverse = endRoom;
 			while (reverse != nullptr) {
 
 				//TODO: Draw route animation
-
 				reversePath.push_back(reverse);
-				auto& reverseCost = cost[reverse];
-				reverse = reverseCost.first;
+				reverse = cost[reverse].first;
 			}
 
-			//std::reverse(reversePath.begin(), reversePath.end());
+			std::reverse(reversePath.begin(), reversePath.end());
 			return reversePath;
 		}
 
@@ -155,7 +151,7 @@ namespace kmint {
 
 	} // namespace pigisland
 
-	
+
 
 	// namespace kmint
 }

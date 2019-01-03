@@ -130,10 +130,12 @@ map read_map(std::istream &is) {
           m.info().header().size * m.info().header().tile_dim,
           m.info().header().background_image};
 }
+
 map read_map(const char *description) {
   std::istringstream is{description};
   return read_map(is);
 }
+
 map read_map(std::string const &description) {
   return read_map(description.c_str());
 }
