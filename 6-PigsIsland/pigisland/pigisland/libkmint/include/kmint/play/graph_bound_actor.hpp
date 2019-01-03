@@ -19,7 +19,7 @@ public:
   void node(node_type const &n) noexcept { node_ = &n; }
   Graph const &graph() const noexcept { return *graph_; }
 
-    node_type const &destinationNode() const noexcept { return *_destinationNode; }
+    const node_type* const &destinationNode() const noexcept { return _destinationNode; }
     void destinationNode(node_type const &destinationNode) noexcept {
       _destinationNode = &destinationNode;
     }
@@ -27,7 +27,7 @@ public:
 private:
   Graph const *graph_;
   node_type const *node_;
-  node_type const *_destinationNode;
+  node_type const *_destinationNode = nullptr;
 };
 
 using map_bound_actor = graph_bound_actor<map::map_graph>;
