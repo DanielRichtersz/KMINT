@@ -76,6 +76,7 @@ public:
 
 private:
   container actors_;
+
 };
 } // namespace play
 } // namespace kmint

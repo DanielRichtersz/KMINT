@@ -35,7 +35,7 @@ int main() {
 
   // main_loop stuurt alle actors aan.
   main_loop(s, window, [&](delta_time dt, loop_controls &ctl) {
-    // gebruik dt om te kijken hoeveel tijd versterken is
+    // gebruik dit om te kijken hoeveel tijd verstreken is
     // sinds de vorige keer dat deze lambda werd aangeroepen
     // loop controls is een object met eigenschappen die je kunt gebruiken om de
     // main-loop aan te sturen.

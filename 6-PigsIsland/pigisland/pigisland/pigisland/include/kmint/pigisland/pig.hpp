@@ -5,7 +5,6 @@
 #include "kmint/pigisland/Flocking/FlockingPig.hpp"
 #include "kmint/pigisland/FDE/FDEPig.hpp"
 
-
 namespace kmint {
 	namespace pigisland {
 
@@ -21,7 +20,7 @@ namespace kmint {
 		private:
 			play::image_drawable drawable_;
 			//FlockingPig _FlockingPig;
-			//FDEPig _FDEPig;
+			FDEPig _FDEPig;
 		};
 
 	} // namespace pigisland
