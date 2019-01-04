@@ -5,6 +5,10 @@
 
 namespace kmint {
 	namespace pigisland {
+		struct DefaultMaxFloat
+		{
+			float val = std::numeric_limits<float>::max();
+		};
 
 		map::map_node const &random_adjacent_node(map::map_node const &node) {
 			int r = random_int(0, node.num_edges());
@@ -28,6 +32,91 @@ namespace kmint {
 
 		int waiting_time(map::map_node const &node) {
 			return static_cast<int>(node[0].weight());
+		}
+
+		float estimate(math::basic_vector2d<kmint::scalar> origin, math::basic_vector2d<kmint::scalar> target, math::basic_vector2d<kmint::scalar> start)
+		{
+			float dx, dy;
+			dx = abs(origin.x() - target.x());
+			dy = abs(origin.y() - target.y());
+			float D = 1.0f;
+			return D * (dx + dy);
+		}
+
+		std::vector<const map::map_node*> reconstructPath(std::map<const map::map_node*, const map::map_node*> cameFrom, const map::map_node* current)
+		{
+			std::vector<const map::map_node*> total;
+
+			while(current != nullptr)
+			{
+				total.emplace_back(current);
+				current = cameFrom[current];
+			}
+			return total;
+		}
+
+		std::vector<const map::map_node*> AstarPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endNode)
+		{
+			std::vector<const map::map_node*> closedSet;
+			std::vector<const map::map_node*> openSet{startNode};
+			std::map<const map::map_node*, const map::map_node*> cameFrom;
+			std::map<const map::map_node*, DefaultMaxFloat> gScore;
+
+			gScore[startNode].val = 0;
+
+			std::map<const map::map_node*, DefaultMaxFloat> fScore;
+
+			fScore[startNode].val = estimate(startNode->location(), endNode->location(), startNode->location()) * 3;
+
+			using pair_type = decltype(fScore)::value_type;
+			while(!openSet.empty())
+			{
+				//get the node in open set with the lowest fScore value
+				auto current = std::min_element(
+					std::begin(fScore), std::end(fScore),
+					[](const pair_type & p1, const pair_type & p2)
+				{
+					return p1.second.val < p2.second.val;
+				}
+				)->first;
+
+				if(math::distance(current->location(), endNode->location()) == 0)
+				{
+					return reconstructPath(cameFrom, current);
+				}
+
+				auto itr = std::find(openSet.begin(), openSet.end(), current);
+				openSet.erase(itr);
+				closedSet.emplace_back(current);
+
+				for(auto &edge = current->begin(); edge !=current->end(); ++edge)
+				{
+					auto currentNeigbor = &edge->to();
+					if(std::find(closedSet.begin(), closedSet.end(), currentNeigbor) != closedSet.end())
+					{
+						continue;
+					}
+
+					auto tenativeGScore = gScore[current].val + math::distance(current->location(), endNode->location());
+
+					if(std::find(openSet.begin(), openSet.end(), currentNeigbor) == openSet.end())
+					{
+						openSet.emplace_back(currentNeigbor);
+					}
+					else if (tenativeGScore >= gScore[currentNeigbor].val)
+					{
+						continue;
+					}
+
+					cameFrom[currentNeigbor] = current;
+					gScore[currentNeigbor].val = tenativeGScore;
+					fScore[currentNeigbor].val = tenativeGScore + estimate(currentNeigbor->location(), endNode->location(), startNode->location());
+
+				}
+
+			}
+
+			return {};
 		}
 
 		std::vector<const map::map_node*> DijkstraShortestPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endRoom) {
@@ -61,8 +150,9 @@ namespace kmint {
 			//While there are still unvisited rooms
 			while (!unvisited.empty()) {
 				//For each edge on current node 
+				auto l = currentNode->location();
 				for (auto& edgeIt = currentNode->begin(); edgeIt != currentNode->end(); ++edgeIt) {
-
+					
 					//Set maxvalue to cost
 					float currentCost = std::numeric_limits<float>::max();
 
