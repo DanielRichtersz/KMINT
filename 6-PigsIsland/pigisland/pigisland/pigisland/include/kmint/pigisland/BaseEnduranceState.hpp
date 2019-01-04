@@ -1,24 +1,16 @@
 #include "kmint/map/map.hpp"
+#include "kmint/pigisland/boat.hpp"
 
-namespace kmint {
-	namespace pigisland {
-		class BaseEnduranceState : public BaseState {
-		public:
-			//BaseEnduranceState(int endurance) : _endurance(endurance) {}
-			//int increaseEndurance(int amount) { _endurance += amount; return _endurance; }
-			//int getEndurance() { return _endurance; }
+class BaseEnduranceState : public state<> {
+public:
+	int increaseEndurance(int amount) { _endurance += amount; return _endurance; }
+	int getEndurance() { return _endurance; }
 
-			//
-			//map::map_node BaseEnduranceState::Execute(const play::map_bound_actor* actor) override {
-			//	BaseState::Execute(actor);
-			//	std::cout << "Execute";
-			//}
-
-
-
-		private:
-			//int _maxEndurance = 100;
-			//int _endurance;
-		};
+	const map::map_node* Execute(T* actor) {
+		
 	}
-}
+
+private:
+	int _endurance;
+};
+
