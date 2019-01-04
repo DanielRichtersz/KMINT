@@ -1,9 +1,12 @@
+#include "kmint/map/map.hpp"
+#include "kmint/pigisland/boat.hpp"
+
 template <class T>
 class state {
 public:
 	T &instance;
 
-	virtual state<T> replaceState() = 0;
+	virtual state<T> replaceState();
 	virtual const map::map_node* Execute(T* actor);
 };
 
