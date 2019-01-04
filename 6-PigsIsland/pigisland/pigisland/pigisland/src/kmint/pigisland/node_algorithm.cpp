@@ -72,8 +72,15 @@ namespace kmint {
 			while(!openSet.empty())
 			{
 				//get the node in open set with the lowest fScore value
+
+				std::vector < std::pair<const map::map_node*, DefaultMaxFloat>> openScores;
+
+				for (auto openNode : openSet)
+				{
+					openScores.emplace_back(std::pair(openNode, gScore[openNode]));
+				}
 				auto current = std::min_element(
-					std::begin(fScore), std::end(fScore),
+					std::begin(openScores), std::end(openScores),
 					[](const pair_type & p1, const pair_type & p2)
 				{
 					return p1.second.val < p2.second.val;
@@ -82,10 +89,13 @@ namespace kmint {
 
 				if(math::distance(current->location(), endNode->location()) == 0)
 				{
-					return reconstructPath(cameFrom, current);
+					auto reversePath = reconstructPath(cameFrom, current);
+					std::reverse(reversePath.begin(), reversePath.end());
+					return reversePath;
 				}
 
 				auto itr = std::find(openSet.begin(), openSet.end(), current);
+
 				openSet.erase(itr);
 				closedSet.emplace_back(current);
 
