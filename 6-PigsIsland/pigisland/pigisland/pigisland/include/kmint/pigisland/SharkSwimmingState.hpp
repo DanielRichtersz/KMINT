@@ -1,12 +1,8 @@
 #ifndef KMINT_PIGISLAND_SHARKSWIMMINGSTATE_HPP
 #define KMINT_PIGISLAND_SHARKSWIMMINGSTATE_HPP
-
-#include "kmint/map/map.hpp"
-#include "../states/state_machine.hpp"
+#include "node_algorithm.hpp"
 #include "SharkBaseState.hpp"
-#include "BaseState.hpp"
 #include "kmint/play.hpp"
-#include "shark.hpp"
 #include <iostream>
 namespace kmint
 {
@@ -18,9 +14,21 @@ namespace kmint
 
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
-				std::cout << "Hello World" << std::endl;
+				std::cout << "Shark is swimming around" << std::endl;
+
+				//Check if state needs replacing
+
+				//Move actor
+				Move(actor);
+				
 			}
 
+		private:
+			void Move(kmint::play::map_bound_actor* actor)
+			{
+				actor->node(random_adjacent_node(actor->node()));
+				BaseEnduranceState::moveEnduranceEffect();
+			}
 		};
 
 	}

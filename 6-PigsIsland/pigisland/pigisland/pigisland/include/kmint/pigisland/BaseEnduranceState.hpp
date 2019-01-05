@@ -14,18 +14,25 @@ namespace kmint
 			BaseEnduranceState() {};
 
 			void setActor(kmint::play::map_bound_actor* _actor) { actor = _actor; }
-			virtual void Execute(kmint::play::map_bound_actor* actor);
+			virtual void Execute(kmint::play::map_bound_actor* actor) const;
 
 			void setEndurance(int remainingEndurance)
 			{
 				_remainingEndurance = remainingEndurance;
 			};
 
-			int increaseEndurance(int amount)
+			void increaseEndurance(int amount)
 			{
 				_remainingEndurance = (_remainingEndurance + amount) <= _maxEndurance
 					? _remainingEndurance += amount
-					: _maxEndurance; return _remainingEndurance;
+					: _maxEndurance; 
+				std::cout << "Endurance: " << _remainingEndurance;
+			}
+
+			void moveEnduranceEffect()
+			{
+				_remainingEndurance = _remainingEndurance <= 0 ? 0 : --_remainingEndurance;
+				std::cout << "Endurance: " << _remainingEndurance;
 			}
 				
 			int getEndurance()

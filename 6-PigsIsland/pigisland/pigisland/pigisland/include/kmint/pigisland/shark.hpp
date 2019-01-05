@@ -4,7 +4,6 @@
 #include "kmint/map/map.hpp"
 #include "kmint/play.hpp"
 #include "kmint/primitives.hpp"
-#include "pig.hpp"
 
 namespace kmint {
 	namespace pigisland {
