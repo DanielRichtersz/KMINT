@@ -16,9 +16,9 @@ namespace kmint
 		public:
 			SharkSwimmingState() = default;
 
-			void* Execute(kmint::pigisland::shark* actor) override
+			void Execute(kmint::play::map_bound_actor* actor) override
 			{
-				
+				std::cout << "Hello World" << std::endl;
 			}
 
 		};

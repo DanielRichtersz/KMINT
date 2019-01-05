@@ -14,7 +14,7 @@ namespace kmint
 			BaseEnduranceState() {};
 
 			void setActor(kmint::play::map_bound_actor* _actor) { actor = _actor; }
-
+			virtual void Execute(kmint::play::map_bound_actor* actor);
 
 			void setEndurance(int remainingEndurance)
 			{
@@ -38,6 +38,7 @@ namespace kmint
 			int _maxEndurance = 100;
 			int _remainingEndurance = 100;
 		};
+
 	}
 }
 

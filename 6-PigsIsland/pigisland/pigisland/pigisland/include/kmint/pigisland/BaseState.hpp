@@ -9,6 +9,6 @@ public:
 	T &instance;
 
 	virtual state<T> replaceState();
-	virtual void* Execute(T* actor);
+	virtual void Execute(T* actor);
 };
 #endif

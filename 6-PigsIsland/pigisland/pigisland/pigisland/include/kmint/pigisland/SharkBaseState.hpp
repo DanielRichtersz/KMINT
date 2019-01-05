@@ -14,6 +14,7 @@ namespace kmint
 		class SharkBaseState : public kmint::pigisland::BaseEnduranceState<kmint::pigisland::shark> {
 		public:
 			SharkBaseState() = default;
+			virtual void Execute(kmint::play::map_bound_actor* actor);
 
 		};
 
