@@ -56,10 +56,12 @@ void shark::act(delta_time dt) {
 		  node(random_adjacent_node(node()));
 	  }
 
-	  if(steps > 100)
+	  if(steps > 3)
 	  {
-
+		  _stage.createNextGeneration();
+		  steps = 0;
 	  }
+	  steps++;
 
 	  t_since_move_ = from_seconds(0);
   }

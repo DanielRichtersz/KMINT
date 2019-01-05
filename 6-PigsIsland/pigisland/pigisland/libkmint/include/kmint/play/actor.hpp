@@ -8,11 +8,15 @@
 #include <functional>
 #include <iterator>
 #include <vector>
+#include "../../../../pigisland/include/kmint/pigisland/Flocking/FlockingPig.hpp"
 
 namespace kmint::ui {
 class drawable;
 }
-
+namespace kmint::pigisland
+{
+class FlockingPig;
+}
 namespace kmint::play {
 
 using actor_id = std::size_t;
@@ -171,6 +175,7 @@ public:
   void save() { saved = true; }
   bool isKilled() const { return killed; }
   bool isSaved() const { return saved; }
+  virtual pigisland::FlockingPig getPig() { return {}; };
 
 private:
   math::vector2d fleeLocation{-1.0f, -1.0f};

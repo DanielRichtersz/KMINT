@@ -1,6 +1,7 @@
 #ifndef KMINT_PLAY_STAGE_HPP
 #define KMINT_PLAY_STAGE_HPP
 
+#include "../../pigisland/include/kmint/pigisland/node_algorithm.hpp"
 #include "kmint/play/actor.hpp"
 #include "kmint/primitives.hpp"
 #include "kmint/util/deref_unique_ptr.hpp"
@@ -10,6 +11,12 @@
 #include <vector>
 
 namespace kmint {
+namespace pigisland
+{
+class FlockingPig;
+class pig;
+class algs;
+}
 namespace play {
 
 class stage {
@@ -73,13 +80,16 @@ public:
   const_iterator cend() const;
   const_iterator begin() const;
   const_iterator end() const;
-  container* getActors() { return &actors_; }
+  container *getActors() { return &actors_; }
   container *getToDelete() { return &toDelete; }
 
-private:
-  container actors_;
-  container toDelete;
+  void createNextGeneration() {
+    //pigisland::algs::createNextGen(this);
+  }
 
+private:
+  std::vector<std::unique_ptr<actor>> actors_;
+  container toDelete;
 };
 } // namespace play
 } // namespace kmint

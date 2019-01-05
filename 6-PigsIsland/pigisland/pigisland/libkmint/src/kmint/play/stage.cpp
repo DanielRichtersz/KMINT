@@ -32,10 +32,10 @@ void check_interactions(ForwardIt begin, ForwardIt end) {
 
 void stage::act(delta_time dt) {
   check_interactions(begin(), end());
-  
-  for (actor &a : *this) {
 
+  for (actor &a : *this) {
     a.act(dt);
+
   }
   std::for_each(begin(), end(), [](actor &a) {
     a.empty_collisions();
