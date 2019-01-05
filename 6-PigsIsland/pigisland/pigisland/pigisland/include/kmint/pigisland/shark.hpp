@@ -5,6 +5,7 @@
 #include "kmint/play.hpp"
 #include "kmint/primitives.hpp"
 #include "FiniteStateMachine.hpp"
+#include "SharkStateConditions.hpp"
 
 namespace kmint {
 	namespace pigisland {
@@ -16,6 +17,8 @@ namespace kmint {
 			bool incorporeal() const override { return false; }
 			scalar radius() const override { return 16.0; }
 			void act(delta_time dt) override;
+			FiniteStateMachine* GetFiniteStateMachine() { return &_finiteStateMachine; }
+
 
 		private:
 			play::image_drawable drawable_;
@@ -23,6 +26,7 @@ namespace kmint {
 			map::map_node const *resting_place_;
 			delta_time t_since_move_{};
 			FiniteStateMachine _finiteStateMachine;
+			SharkStateConditions _sharkStateConditions;
 		};
 
 	} // namespace pigisland

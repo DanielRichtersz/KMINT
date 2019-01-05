@@ -1,9 +1,7 @@
 #ifndef KMINT_PIGISLAND_BASEENDURANCESTATE_HPP
 #define KMINT_PIGISLAND_BASEENDURANCESTATE_HPP
 
-#include "kmint/map/map.hpp"
 #include "../states/state_machine.hpp"
-#include "kmint/play.hpp"
 #include <iostream>
 namespace kmint
 {
