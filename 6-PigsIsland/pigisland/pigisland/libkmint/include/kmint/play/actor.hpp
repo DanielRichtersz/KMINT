@@ -167,10 +167,16 @@ public:
   void SeekLocation(math::vector2d* _seekLocation) { seekLocation = *_seekLocation;}
   math::vector2d FleeLocation() const { return fleeLocation; };
   math::vector2d SeekLocation() const { return seekLocation; };
+  void kill() { killed = true; }
+  void save() { saved = true; }
+  bool isKilled() const { return killed; }
+  bool isSaved() const { return saved; }
 
 private:
   math::vector2d fleeLocation{-1.0f, -1.0f};
   math::vector2d seekLocation{-1.0f, -1.0f};
+  bool killed = false;
+  bool saved = false;
 
   std::vector<actor *> collision_set_;
   std::vector<actor *> perceived_set_;

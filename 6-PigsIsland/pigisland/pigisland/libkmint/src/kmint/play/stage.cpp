@@ -41,6 +41,7 @@ void stage::act(delta_time dt) {
     a.empty_collisions();
     a.empty_perceived();
   });
+
 }
 
 void stage::remove_actor(actor const &a) {

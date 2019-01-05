@@ -17,6 +17,10 @@ namespace kmint {
 
 				if (itr->incorporeal())
 				{
+					if (math::distance(location(), itr->location()) < 16)
+					{
+						itr->kill();
+					}
 					auto loc = &location();
 					itr->SeekLocation(loc);
 				}

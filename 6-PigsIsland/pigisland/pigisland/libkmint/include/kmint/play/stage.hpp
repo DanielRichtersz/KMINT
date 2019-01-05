@@ -73,9 +73,12 @@ public:
   const_iterator cend() const;
   const_iterator begin() const;
   const_iterator end() const;
+  container* getActors() { return &actors_; }
+  container *getToDelete() { return &toDelete; }
 
 private:
   container actors_;
+  container toDelete;
 
 };
 } // namespace play

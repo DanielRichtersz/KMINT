@@ -30,6 +30,12 @@ namespace kmint {
 		void pig::act(delta_time dt) {
 			//pig::move(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
 
+			if(isKilled() || isSaved())
+			{
+				location(math::vector2d{ -500.0f, -500.0f });
+				return;
+			}
+
 			auto oldLocation = location();
 
 			if(FleeLocation().x() != -1.0f)
