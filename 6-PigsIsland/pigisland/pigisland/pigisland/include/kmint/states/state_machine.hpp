@@ -34,15 +34,31 @@ namespace kmint {
 		class BaseEnduranceState : public state<kmint::play::graph_bound_actor<T>> {
 		public:
 			BaseEnduranceState() {};
-			state<kmint::play::graph_bound_actor<T>> replaceState() override { return {}; };
+			state<kmint::play::graph_bound_actor<T>> replaceState() override
+			{
+				if(actor.location().x() == 0)
+				{
+					//next state
+				}
+				//else do nothing
+				return {	};
+			};
 			const map::map_node* Execute(kmint::play::graph_bound_actor<T>* actor) override;
 
-			void setActor(kmint::play::graph_bound_actor<T> actor){}
+			void setActor(kmint::play::graph_bound_actor<T> _actor) { actor = _actor; }
+			void setEndurance(int _remainingEndurance) { remainingEndurance = _remainingEndurance; };
+
+		private:
+			kmint::play::graph_bound_actor<T> actor;
+			int remainingEndurance;
 		};
 
 		template <class T>
 		const map::map_node* BaseEnduranceState<T>::Execute(kmint::play::graph_bound_actor<T>* actor)
 		{
+			//check endurance
+			//check next location
+
 			return nullptr;
 		}
 	}
