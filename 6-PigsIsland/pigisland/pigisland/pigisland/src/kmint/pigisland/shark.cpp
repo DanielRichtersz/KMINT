@@ -42,7 +42,6 @@ void shark::act(delta_time dt) {
 	  while (math::distance(destinationNode()->location(), node().location()) == 0) {
 		  destinationNode(find_random_mooring_place(graph()));
 	  }
-	  const map::map_node* nextNode = nullptr;
 
 	  if (destinationNode() != nullptr) {
 		  std::vector<const map::map_node*> tempVector = DijkstraShortestPath(graph(), &node(), destinationNode());
