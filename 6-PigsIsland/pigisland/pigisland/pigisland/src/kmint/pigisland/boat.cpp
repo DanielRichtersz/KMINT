@@ -37,7 +37,8 @@ namespace kmint {
 				}
 				
 				if (destinationNode() != nullptr) {
-					std::vector<const map::map_node*> tempVector = DijkstraShortestPath(graph(), &node(), destinationNode());
+					auto dest = destinationNode();
+					std::vector<const map::map_node*> tempVector = AstarPath(graph(), &node(), dest);
 					nextNode = tempVector.at(1);
 				}
 

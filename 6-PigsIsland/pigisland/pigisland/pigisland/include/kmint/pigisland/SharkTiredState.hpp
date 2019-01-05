@@ -29,7 +29,8 @@ namespace kmint
 				actor->destinationNode(find_shark_resting_place(actor->graph()));
 				if (actor->destinationNode() != nullptr)
 				{
-					std::vector<const map::map_node*> path = DijkstraShortestPath(actor->graph(), &actor->node(), actor->destinationNode());
+					std::vector<const map::map_node*> path = AstarPath(actor->graph(), &actor->node(), actor->destinationNode());
+					//DijkstraShortestPath(actor->graph(), &actor->node(), actor->destinationNode());
 					const map::map_node* nextNode = path.at(1);
 					if (nextNode != nullptr)
 					{
