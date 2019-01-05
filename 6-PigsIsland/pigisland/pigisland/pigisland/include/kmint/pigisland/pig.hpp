@@ -19,7 +19,7 @@ namespace kmint {
 
 		private:
 			play::image_drawable drawable_;
-			//FlockingPig _FlockingPig;
+			FlockingPig _FlockingPig;
 			FDEPig _FDEPig;
 			math::vector2d mainPropulsion;
 		};

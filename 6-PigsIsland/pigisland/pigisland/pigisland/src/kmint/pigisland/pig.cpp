@@ -4,6 +4,7 @@
 #include "kmint/pigisland/resources.hpp"
 #include "kmint/random.hpp"
 #include <cmath>
+#include <iostream>
 
 namespace kmint {
 	namespace pigisland {
@@ -27,15 +28,35 @@ namespace kmint {
 		//: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(FlockingPig{}), _FDEPig(FDEPig{}) {}
 
 		void pig::act(delta_time dt) {
-			
 			//pig::move(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
 
 			auto oldLocation = location();
 
-			auto otherForce = random_vector2();
-			_FDEPig.addForce(mainPropulsion);
-			_FDEPig.addForce(otherForce);
+			if(FleeLocation().x() != -1.0f)
+			{
+				auto fleeLocation = FleeLocation();
 
+				_FDEPig.addForce((fleeLocation - location()) * _FlockingPig.getAttracktionToShark());
+
+				FleeLocation(&math::vector2d{ -1.0f, -1.0f });
+			}
+
+			if(SeekLocation().x() != -1.0f)
+			{
+				auto seekLocation = SeekLocation();
+
+				_FDEPig.addForce((location() - seekLocation) * _FlockingPig.getAttracktionToBoat());
+
+				SeekLocation(&math::vector2d{ -1.0f, -1.0f });
+			}
+
+			for ( auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
+			{
+
+				_FDEPig.addForce((location() - itr->location()) * _FlockingPig.getAlignment());
+				_FDEPig.addForce((itr->location() - location()) * _FlockingPig.getSeperation());
+
+			}
 			auto newLocation = location() + _FDEPig.getAcceleration();
 
 			_FDEPig.removeAllForces();
