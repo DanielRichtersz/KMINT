@@ -9,12 +9,12 @@ namespace kmint
 {
 	namespace pigisland
 	{
-		class SharkBaseState : public kmint::pigisland::BaseEnduranceState<kmint::play::map_bound_actor*> {
+		class SharkBaseState : public kmint::pigisland::BaseEnduranceState {
 		protected:
 			~SharkBaseState() = default;
 		public:
 			SharkBaseState() = default;
-			virtual void Execute(kmint::play::map_bound_actor* actor);
+			virtual void Execute(kmint::play::map_bound_actor* actor) {};
 
 		};
 

@@ -1,5 +1,5 @@
 #ifndef KMINT_PIGISLAND_SHARKTIREDSTATE_HPP
-#ifndef KMINT_PIGISLAND_SHARKTIREDSTATE_HPP
+#define KMINT_PIGISLAND_SHARKTIREDSTATE_HPP
 #include "node_algorithm.hpp"
 #include "SharkBaseState.hpp"
 #include "kmint/play.hpp"
@@ -33,7 +33,7 @@ namespace kmint
 					const map::map_node* nextNode = path.at(1);
 					if (nextNode != nullptr)
 					{
-						actor->node(nextNode());
+						actor->node(*nextNode);
 						BaseEnduranceState::moveEnduranceEffect();
 					}
 				}

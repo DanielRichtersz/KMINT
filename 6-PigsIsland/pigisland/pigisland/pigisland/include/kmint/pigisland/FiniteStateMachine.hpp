@@ -1,18 +1,35 @@
 #include "BaseEnduranceState.hpp"
 #include "kmint/play.hpp"
+#include "FiniteStatesSource.hpp"
 
 namespace kmint {
 	namespace pigisland {
 		class FiniteStateMachine {
 		public:
-			explicit FiniteStateMachine(const BaseEnduranceState* base_endurance_state) : _currentState(base_endurance_state) { 
-				
+			explicit FiniteStateMachine() : _currentState{} {
+
 			}
 
-			void executeState(kmint::play::map_bound_actor* actor) const { _currentState->Execute(actor); }
+			void setState(kmint::pigisland::BaseEnduranceState* state)
+			{
+				_currentState = state;
+			}
+
+			kmint::pigisland::BaseEnduranceState* getState()
+			{
+				return _currentState;
+			}
+
+			kmint::pigisland::FiniteStatesSource finiteStateSource()
+			{
+				return _finiteStateSource;
+			}
+
+			void executeState(kmint::play::map_bound_actor* actor) const { if (_currentState != nullptr) { _currentState->Execute(actor); } }
 
 		private:
-			const kmint::pigisland::BaseEnduranceState* _currentState;
+			kmint::pigisland::BaseEnduranceState* _currentState;
+			kmint::pigisland::FiniteStatesSource _finiteStateSource;
 		};
 	}
 }

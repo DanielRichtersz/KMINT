@@ -10,7 +10,7 @@ namespace kmint
 	{
 		class SharkHuntingState : public kmint::pigisland::SharkBaseState {
 		public:
-			SharkHuntingState(map::map_node* targetNode) : _targetNode(targetNode) { };
+			SharkHuntingState() { };
 
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
@@ -23,13 +23,18 @@ namespace kmint
 
 			}
 
+			void setTargetNode(map::map_node* targetNode)
+			{
+				_targetNode = targetNode;
+			}
+
 		private:
 			void Move(kmint::play::map_bound_actor* actor)
 			{
 				if (_targetNode != nullptr)
 				{
-					actor->destinationNode(_targetNode());
-					BaseEnduranceState::moveEnduranceEffect();
+					actor->destinationNode(*_targetNode);
+					BaseEnduranceState::increaseEndurance(-1);
 				}
 			}
 

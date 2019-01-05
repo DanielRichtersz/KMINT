@@ -6,8 +6,6 @@
 template <class T>
 class state {
 public:
-	T &instance;
-
 	virtual state<T> replaceState();
 	virtual void Execute(T* actor);
 };
