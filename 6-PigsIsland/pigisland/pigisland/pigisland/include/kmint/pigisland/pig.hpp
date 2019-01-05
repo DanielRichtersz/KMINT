@@ -13,12 +13,12 @@ namespace kmint {
 			void move(math::vector2d delta) { location(location() + delta); }
 			void act(delta_time dt) override;
 			bool perceptive() const override { return true; }
-			scalar range_of_perception() const override { return 30.0f; }
+			scalar range_of_perception() const override { return 100.0f; }
 
 		private:
 			play::image_drawable drawable_;
-			//FlockingPig _FlockingPig;
-			//FDEPig _FDEPig;
+			FlockingPig _FlockingPig;
+			FDEPig _FDEPig;
 		};
 
 	} // namespace pigisland
