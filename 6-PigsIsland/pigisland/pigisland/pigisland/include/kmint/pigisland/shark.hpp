@@ -21,7 +21,7 @@ namespace kmint {
 			map::map_graph *map_;
 			map::map_node const *resting_place_;
 			delta_time t_since_move_{};
-			kmint::pigisland::BaseEnduranceState<shark> bes;
+			kmint::pigisland::BaseEnduranceState bes;
 		};
 
 	} // namespace pigisland
