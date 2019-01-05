@@ -7,10 +7,11 @@ namespace kmint {
 		template <class T>
 		class state {
 		public:
-			T &instance;
+		   state() = default;
+			virtual ~state(){};
 
-			virtual state<T> replaceState();
-			virtual const map::map_node* Execute(T* actor);
+			virtual state<T> replaceState() { return {}; };
+			virtual const map::map_node* Execute(T* actor){ return nullptr;};
 		};
 
 
@@ -32,9 +33,17 @@ namespace kmint {
 		template<class T>
 		class BaseEnduranceState : public state<kmint::play::graph_bound_actor<T>> {
 		public:
-			BaseEnduranceState(kmint::play::graph_bound_actor<T> actor) : state<kmint::play::graph_bound_actor<T>>{ actor } {}
+			BaseEnduranceState() {};
+			state<kmint::play::graph_bound_actor<T>> replaceState() override { return {}; };
+			const map::map_node* Execute(kmint::play::graph_bound_actor<T>* actor) override;
+
+			void setActor(kmint::play::graph_bound_actor<T> actor){}
 		};
 
-
+		template <class T>
+		const map::map_node* BaseEnduranceState<T>::Execute(kmint::play::graph_bound_actor<T>* actor)
+		{
+			return nullptr;
+		}
 	}
 }
