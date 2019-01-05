@@ -2,6 +2,8 @@
 #define KMINT_PIGISLAND_PIG_HPP
 
 #include "kmint/play.hpp"
+#include "FDE/FDEPig.hpp"
+#include "Flocking/FlockingPig.hpp"
 
 namespace kmint {
 	namespace pigisland {
