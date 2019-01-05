@@ -53,8 +53,8 @@ namespace kmint {
 			for ( auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
 			{
 
-				_FDEPig.addForce((location() - itr->location()) * _FlockingPig.getAlignment());
-				_FDEPig.addForce((itr->location() - location()) * _FlockingPig.getSeperation());
+				_FDEPig.addForce((location() - itr->location()) * _FlockingPig.getAlignment() * _FlockingPig.getCohesion());
+				_FDEPig.addForce((itr->location() - location()) * _FlockingPig.getSeperation() * _FlockingPig.getCohesion());
 
 			}
 			auto newLocation = location() + _FDEPig.getAcceleration();
