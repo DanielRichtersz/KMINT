@@ -4,6 +4,7 @@
 #include "kmint/map/map.hpp"
 #include "kmint/play.hpp"
 #include "kmint/primitives.hpp"
+#include "../states/state_machine.hpp"
 
 namespace kmint {
 	namespace pigisland {
