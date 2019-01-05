@@ -14,8 +14,10 @@ namespace kmint {
 			shark(kmint::map::map_graph &g);
 			ui::drawable const &drawable() const override { return drawable_; }
 			bool incorporeal() const override { return false; }
-			scalar radius() const override { return 16.0; }
+			scalar radius() const override { return 100.0; }
 			void act(delta_time dt) override;
+			scalar range_of_perception() const override { return 100.0; };
+			bool perceptive() const override { return true; };
 
 		private:
 			play::image_drawable drawable_;

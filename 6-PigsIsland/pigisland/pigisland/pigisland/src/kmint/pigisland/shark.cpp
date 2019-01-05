@@ -15,9 +15,24 @@ namespace pigisland {
 void shark::act(delta_time dt) {
   t_since_move_ += dt;
 
-   //If mag bewegen
+  for(auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
+  {
+	  
+	  if(itr->incorporeal())
+	  {
+		  itr->FleeLocation(&location());
+	  }
+
+  }
+
+
+  //If mag bewegen
   if (to_seconds(t_since_move_) >= waiting_time(node())) {
 	  
+
+	  const map::map_node* nextNode = nullptr;
+
+
 	  num_colliding_actors();
 
 	  if (destinationNode() == nullptr) {
