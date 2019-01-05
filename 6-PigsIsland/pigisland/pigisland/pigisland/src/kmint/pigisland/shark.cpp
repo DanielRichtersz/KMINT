@@ -28,7 +28,6 @@ void shark::act(delta_time dt) {
 
   }
 
-
   //If mag bewegen
   if (to_seconds(t_since_move_) >= waiting_time(node())) {
 	  const map::map_node* nextNode = nullptr;
@@ -56,6 +55,12 @@ void shark::act(delta_time dt) {
 	  else { //Move to random node, should never happen unless something goes really wrong
 		  node(random_adjacent_node(node()));
 	  }
+
+	  if(steps > 100)
+	  {
+
+	  }
+
 	  t_since_move_ = from_seconds(0);
   }
 }

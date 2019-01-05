@@ -25,6 +25,7 @@ namespace kmint {
 			delta_time t_since_move_{};
 			kmint::pigisland::BaseEnduranceState bes;
 			play::stage &_stage;
+			int steps = 0;
 		};
 
 	} // namespace pigisland
