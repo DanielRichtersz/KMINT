@@ -1,6 +1,4 @@
 #include <iostream>
-#include "kmint/pigisland/boat.hpp"
-#include "kmint/pigisland/shark.hpp"
 #include "BaseState.hpp"
 #include "BaseEnduranceState.hpp"
 

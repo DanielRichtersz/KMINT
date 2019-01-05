@@ -24,7 +24,7 @@ namespace kmint {
 		void pig::act(delta_time dt) {
 			
 			//pig::move(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
-
+			
 			//free_roaming_actor::location(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
 			free_roaming_actor::act(dt);
 		}

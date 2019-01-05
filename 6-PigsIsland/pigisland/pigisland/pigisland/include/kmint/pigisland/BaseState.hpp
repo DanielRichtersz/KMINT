@@ -6,9 +6,9 @@
 template <class T>
 class state {
 public:
-	//T &instance;
+	T &instance;
 
-	//virtual state<T> replaceState();
-	//virtual const kmint::map::map_node* Execute(T* actor);
+	virtual state<T> replaceState();
+	virtual void* Execute(T* actor);
 };
 #endif
