@@ -36,7 +36,7 @@ namespace kmint {
 			BaseEnduranceState() {};
 			state<kmint::play::graph_bound_actor<T>> replaceState() override
 			{
-				if(actor.location().x() == 0)
+				if(actor->location().x() == 0)
 				{
 					//next state
 				}
@@ -45,11 +45,11 @@ namespace kmint {
 			};
 			const map::map_node* Execute(kmint::play::graph_bound_actor<T>* actor) override;
 
-			void setActor(kmint::play::graph_bound_actor<T> _actor) { actor = _actor; }
+			void setActor(kmint::play::graph_bound_actor<T>* _actor) { actor = _actor; }
 			void setEndurance(int _remainingEndurance) { remainingEndurance = _remainingEndurance; };
 
 		private:
-			kmint::play::graph_bound_actor<T> actor;
+			kmint::play::graph_bound_actor<T>* actor;
 			int remainingEndurance;
 		};
 
