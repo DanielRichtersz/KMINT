@@ -21,6 +21,7 @@ namespace kmint {
 			play::image_drawable drawable_;
 			//FlockingPig _FlockingPig;
 			FDEPig _FDEPig;
+			math::vector2d mainPropulsion;
 		};
 
 	} // namespace pigisland
