@@ -1,3 +1,4 @@
+#pragma once
 #include "kmint/map/map.hpp"
 #include "kmint/pigisland/boat.hpp"
 
@@ -28,9 +29,10 @@ namespace kmint {
 		//	}
 		//};
 
-		class BaseEnduranceState : public state<kmint::play::map_bound_actor> {
+		template<class T>
+		class BaseEnduranceState : public state<kmint::play::graph_bound_actor<T>> {
 		public:
-			BaseEnduranceState(kmint::play::map_bound_actor actor) : state<kmint::play::map_bound_actor>{ actor } {}
+			BaseEnduranceState(kmint::play::graph_bound_actor<T> actor) : state<kmint::play::graph_bound_actor<T>>{ actor } {}
 		};
 
 
