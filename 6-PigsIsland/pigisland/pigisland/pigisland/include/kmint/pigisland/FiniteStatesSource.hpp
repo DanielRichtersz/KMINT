@@ -1,3 +1,6 @@
+#ifndef PIGISLAND_FINITESTATESSOURCE_HPP
+#define PIGISLAND_FINITESTATESSOURCE_HPP
+
 #include "kmint/play.hpp"
 #include "SharkSwimmingState.hpp"
 #include "SharkHuntingState.hpp"
@@ -42,3 +45,4 @@ namespace kmint {
 		};
 	}
 }
+#endif

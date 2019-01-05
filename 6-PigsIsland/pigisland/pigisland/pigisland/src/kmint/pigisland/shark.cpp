@@ -6,10 +6,9 @@ namespace kmint {
 namespace pigisland {
 	shark::shark(kmint::map::map_graph &g)
 		: play::map_bound_actor{ g, find_shark_resting_place(g) },
-		drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node()), _finiteStateMachine{FiniteStateMachine{}}
+		drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node())
 	{
-		_finiteStateMachine.setState(_finiteStateMachine.finiteStateSource().GetSharkSwimmingState());
-		_finiteStateMachine.getState()->setEndurance(100);
+		_finiteStateMachine.setState(_finiteStateMachine.finiteStateSource()->GetSharkSwimmingState());
 	}
 
 
@@ -24,7 +23,6 @@ void shark::act(delta_time dt) {
 	  const map::map_node* nextNode = nullptr;
 
 	  _finiteStateMachine.executeState(this);
-
 	  //num_colliding_actors();
 
 	  //if (destinationNode() == nullptr) {
