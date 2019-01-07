@@ -2,7 +2,6 @@
 #include "kmint/random.hpp"
 #include <algorithm>
 #include <map>
-#include <iostream>
 
 namespace kmint {
 	namespace pigisland {

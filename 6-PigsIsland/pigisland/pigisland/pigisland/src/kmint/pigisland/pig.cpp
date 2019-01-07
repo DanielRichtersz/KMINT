@@ -26,7 +26,7 @@ namespace kmint {
 		pig::pig(math::vector2d location)
 			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() } {_FDEPig.setMass(20); }
 		pig::pig(math::vector2d location, PigGenes genes)
-			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(genes) {_FDEPig.setMass(20); }
+			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(genes) {_FDEPig.setMass(20);}
 
 		void pig::act(delta_time dt) {
 			//pig::move(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
