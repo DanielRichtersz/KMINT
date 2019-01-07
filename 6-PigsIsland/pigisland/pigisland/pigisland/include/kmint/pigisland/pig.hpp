@@ -2,8 +2,8 @@
 #define KMINT_PIGISLAND_PIG_HPP
 
 #include "kmint/play.hpp"
-#include "../../kmint/pigisland/Flocking/FlockingPig.hpp"
-#include "../../kmint/pigisland/FDE/FDEPig.hpp"
+#include "FDE/FDEPig.hpp"
+#include "Flocking/FlockingPig.hpp"
 
 namespace kmint {
 	namespace pigisland {
@@ -21,12 +21,12 @@ namespace kmint {
 			bool isFreeRoamingActor() override { return true; };
 			void setGenes(pigisland::FlockingPig gene) override { _FlockingPig = gene; };
 			void reset() override;
+			scalar range_of_perception() const override { return 100.0f; }
 
 		private:
 			play::image_drawable drawable_;
 			FlockingPig _FlockingPig;
 			FDEPig _FDEPig;
-			math::vector2d mainPropulsion;
 		};
 
 	} // namespace pigisland
