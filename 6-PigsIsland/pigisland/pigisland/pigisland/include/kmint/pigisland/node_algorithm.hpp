@@ -41,11 +41,6 @@ map::map_node const &find_shark_resting_place(map::map_graph const &graph);
 std::vector<const map::map_node*> DijkstraShortestPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endRoom);
 
 void RemoveMapNodeFromVector(std::vector<kmint::map::map_node> &unvisited, kmint::map::map_node & currentNode);
-	class algs
-	{
-	public:
-		static void createNextGen(play::stage* stage);
-	};
 }
 
 

@@ -74,6 +74,12 @@ namespace kmint {
 			//free_roaming_actor::location(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
 			//free_roaming_actor::act(dt);
 		}
+
+		void pig::reset()
+		{
+			actor::reset();
+			location(random_vector());
+		}
 	} // namespace pigisland
 
 } // namespace kmint

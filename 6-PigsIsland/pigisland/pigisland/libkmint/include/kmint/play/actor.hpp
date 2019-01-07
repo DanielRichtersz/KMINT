@@ -176,6 +176,14 @@ public:
   bool isKilled() const { return killed; }
   bool isSaved() const { return saved; }
   virtual pigisland::FlockingPig getPig() { return {}; };
+  virtual void setGenes(pigisland::FlockingPig gene){};
+
+  virtual bool isFreeRoamingActor() { return false; }
+  virtual void reset()
+  { 
+    killed = false;
+    saved = false;
+  }
 
 private:
   math::vector2d fleeLocation{-1.0f, -1.0f};

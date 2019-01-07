@@ -18,6 +18,9 @@ namespace kmint {
 			bool perceptive() const override { return true; }
 			scalar range_of_perception() const override { return 100.0f; }
 			FlockingPig getPig() override { return _FlockingPig; };
+			bool isFreeRoamingActor() override { return true; };
+			void setGenes(pigisland::FlockingPig gene) override { _FlockingPig = gene; };
+			void reset() override;
 
 		private:
 			play::image_drawable drawable_;

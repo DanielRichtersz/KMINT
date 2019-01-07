@@ -145,8 +145,8 @@ namespace kmint {
 			std::map<int, int>asdf;
 			return reversePath;
 		}
-
-		void algs::createNextGen(play::stage* stage)
+/*
+		void createNextGen(play::stage* stage)
 		{
 			std::map<int, kmint::play::actor *> pigsMap;
 			std::vector<pigisland::FlockingPig> pigGenes;
@@ -178,6 +178,7 @@ namespace kmint {
 						parent1.getAttracktionToBoat() + 0.1f));
 				PeppaPig.setAttractionToShark(random_scalar(parent1.getAttracktionToShark() - 0.1f,
 					parent1.getAttracktionToShark() + 0.1f));
+
 				PeppaPig.setCohesion(random_scalar(parent2.getCohesion() - 0.1f,
 					parent2.getCohesion() + 0.1f));
 				PeppaPig.setSeperation(random_scalar(parent2.getSeperation() - 0.1f,
@@ -186,7 +187,7 @@ namespace kmint {
 				stage->build_actor<pigisland::pig>(math::vector2d(i * 10.0f, i * 6.0f));
 			} 
 
-		}
+		}*/
 
 		//void RemoveMapNodeFromVector(std::vector<const kmint::map::map_node*> vector, const kmint::map::map_node* mapNode)
 		//{
