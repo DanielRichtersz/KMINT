@@ -11,11 +11,16 @@ namespace kmint {
 		class pig : public play::free_roaming_actor {
 		public:
 			explicit pig(math::vector2d location);
+			explicit pig(math::vector2d location, FlockingPig genes);
 			const ui::drawable &drawable() const override { return drawable_; }
 			void move(math::vector2d delta) { location(location() + delta); }
 			void act(delta_time dt) override;
 			bool perceptive() const override { return true; }
 			scalar range_of_perception() const override { return 100.0f; }
+			FlockingPig getPig() override { return _FlockingPig; };
+			bool isFreeRoamingActor() override { return true; };
+			void setGenes(pigisland::FlockingPig gene) override { _FlockingPig = gene; };
+			void reset() override;
 
 		private:
 			play::image_drawable drawable_;

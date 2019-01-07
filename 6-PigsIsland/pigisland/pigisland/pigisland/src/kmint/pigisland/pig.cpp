@@ -25,10 +25,18 @@ namespace kmint {
 
 		pig::pig(math::vector2d location)
 			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() } {_FDEPig.setMass(20); }
+		pig::pig(math::vector2d location, FlockingPig genes)
+			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(genes) {_FDEPig.setMass(20); }
 		//: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(FlockingPig{}), _FDEPig(FDEPig{}) {}
 
 		void pig::act(delta_time dt) {
 			//pig::move(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
+
+			if(isKilled() || isSaved())
+			{
+				location(math::vector2d{ -500.0f, -500.0f });
+				return;
+			}
 
 			auto oldLocation = location();
 
@@ -65,6 +73,12 @@ namespace kmint {
 
 			//free_roaming_actor::location(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
 			//free_roaming_actor::act(dt);
+		}
+
+		void pig::reset()
+		{
+			actor::reset();
+			location(random_vector());
 		}
 	} // namespace pigisland
 

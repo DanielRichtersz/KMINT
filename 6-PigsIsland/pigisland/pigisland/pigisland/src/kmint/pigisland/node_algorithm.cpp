@@ -237,9 +237,11 @@ namespace kmint {
 		//		reverse = cost[reverse].first;
 		//	}
 
-		//	std::reverse(reversePath.begin(), reversePath.end());
-		//	return reversePath;
+			//std::reverse(reversePath.begin(), reversePath.end());
+			//std::map<int, int>asdf;
+			//return reversePath;
 		//}
+
 
 		//void RemoveMapNodeFromVector(std::vector<const kmint::map::map_node*> vector, const kmint::map::map_node* mapNode)
 		//{

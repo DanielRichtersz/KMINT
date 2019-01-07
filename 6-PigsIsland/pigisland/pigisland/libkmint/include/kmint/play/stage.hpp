@@ -1,6 +1,7 @@
 #ifndef KMINT_PLAY_STAGE_HPP
 #define KMINT_PLAY_STAGE_HPP
 
+#include "../../pigisland/include/kmint/pigisland/node_algorithm.hpp"
 #include "kmint/play/actor.hpp"
 #include "kmint/primitives.hpp"
 #include "kmint/util/deref_unique_ptr.hpp"
@@ -8,8 +9,16 @@
 #include <memory>
 #include <type_traits>
 #include <vector>
+#include <map>
+#include <iostream>
 
 namespace kmint {
+namespace pigisland
+{
+class FlockingPig;
+class pig;
+class algs;
+}
 namespace play {
 
 class stage {
@@ -73,10 +82,56 @@ public:
   const_iterator cend() const;
   const_iterator begin() const;
   const_iterator end() const;
+  container *getActors() { return &actors_; }
+  container *getToDelete() { return &toDelete; }
+
+  void createNextGeneration() {
+    std::map<int, kmint::play::actor *> pigsMap;
+    std::vector<pigisland::FlockingPig> pigGenes;
+    int i = 0;
+    std::for_each(begin(), end(),
+    [&i, &pigsMap, &pigGenes](play::actor &a) {
+      kmint::play::actor *const newPig = &a;
+      if (newPig->isFreeRoamingActor()) {
+        if (!newPig->isKilled()) {
+          pigGenes.emplace_back(newPig->getPig());
+        }
+        newPig->kill();
+        pigsMap[i] = newPig;
+        i++;
+      }
+    });
+
+    for (int i = 0; i < 100; i++) {
+
+      pigisland::FlockingPig PeppaPig;
+      pigisland::FlockingPig parent1 =
+          pigGenes[random_scalar(0, pigGenes.size() - 1)];
+      pigisland::FlockingPig parent2 =
+          pigGenes[random_scalar(0, pigGenes.size() - 1)];
+
+      PeppaPig.setAlignment(random_scalar(parent1.getAlignment() - 0.1f,
+                                          parent1.getAlignment() + 0.1f));
+      PeppaPig.setAttractionToBoat(
+          random_scalar(parent1.getAttracktionToBoat() - 0.1f,
+                        parent1.getAttracktionToBoat() + 0.1f));
+      PeppaPig.setAttractionToShark(
+          random_scalar(parent1.getAttracktionToShark() - 0.1f,
+                        parent1.getAttracktionToShark() + 0.1f));
+
+      PeppaPig.setCohesion(random_scalar(parent2.getCohesion() - 0.1f,
+                                         parent2.getCohesion() + 0.1f));
+      PeppaPig.setSeperation(random_scalar(parent2.getSeperation() - 0.1f,
+                                           parent2.getSeperation() + 0.1f));
+
+      pigsMap[i]->setGenes(PeppaPig);
+      pigsMap[i]->reset();
+    } 
+  }
 
 private:
-  container actors_;
-
+  std::vector<std::unique_ptr<actor>> actors_;
+  container toDelete;
 };
 } // namespace play
 } // namespace kmint

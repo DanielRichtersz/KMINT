@@ -2,6 +2,9 @@
 #define PIGISLAND_NODE_ALGORITHM_HPP
 
 #include "kmint/map/map.hpp"
+#include "kmint/play/actor.hpp"
+#include "kmint/play/stage.hpp"
+
 namespace kmint {
 namespace pigisland {
 
