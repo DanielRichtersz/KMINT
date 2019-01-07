@@ -45,12 +45,6 @@ namespace kmint
 						return _finiteStateSource->GetSharkHuntingState();
 					}
 				}
-				// Als boat binnen 50 pixels is, retourneer SharkFearedState
-
-				// Als pig binnen 100 pixels i, retourneer SharkHuntingState
-
-
-
 
 				return _finiteStateSource->GetSharkSwimmingState();
 			}

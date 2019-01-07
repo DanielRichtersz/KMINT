@@ -62,13 +62,12 @@ void stage::act(delta_time dt) {
       }
     }
     a.act(dt);
-
   }
+
   std::for_each(begin(), end(), [](actor &a) {
     a.empty_collisions();
     a.empty_perceived();
   });
-
 }
 
 void stage::remove_actor(actor const &a) {
