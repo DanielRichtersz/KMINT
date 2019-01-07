@@ -66,24 +66,25 @@ namespace kmint {
 
 			}
 			auto newLocation = location() + _FDEPig.getAcceleration();
-			_heading = _FDEPig.getAcceleration();
-			if(newLocation.x() > 928.0f)
+			if(newLocation.x() > 1020.0f)
 			{
-				newLocation.x(928.0f);
+				_FDEPig.addForce(math::vector2d{ 1020.0f - newLocation.x(), 0 });
 			}
 			if(newLocation.x() < 0.0f)
 			{
-				newLocation.x(0);
+				_FDEPig.addForce(math::vector2d{newLocation.x() * -1.3f, 0 });
 			}
 
-			if(newLocation.y() > 728.0f)
+			if(newLocation.y() > 760.0f)
 			{
-				newLocation.y(728.0f);
+				_FDEPig.addForce(math::vector2d{ 0, 760.0f - newLocation.y() });
 			}
 			if (newLocation.y() < 0.0f)
 			{
-				newLocation.y(0.0f);
+				_FDEPig.addForce(math::vector2d{ 0, newLocation.y() * -1.3f });
 			}
+			newLocation = location() + _FDEPig.getAcceleration();
+			_heading = _FDEPig.getAcceleration();
 
 			_FDEPig.removeAllForces();
 
