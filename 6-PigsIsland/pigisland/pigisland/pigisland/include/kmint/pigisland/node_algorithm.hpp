@@ -35,8 +35,8 @@ namespace kmint {
 		///
 		map::map_node const &find_shark_resting_place(map::map_graph const &graph);
 		std::vector<const map::map_node*> AstarPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endNode);
-		//const map::map_node* FindNearestNodeToLocation(map::map_graph const &graph, math::vector2d location);
-		//float GetPathTotalCost(std::vector < const map::map_node* > path);
+		const map::map_node* FindNearestNodeToLocation(map::map_graph const &graph, math::vector2d location);
+		float GetPathTotalCost(std::vector < const map::map_node* > path);
 
 		//std::vector<const map::map_node*> DijkstraShortestPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endRoom);
 

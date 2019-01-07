@@ -24,17 +24,23 @@ namespace kmint
 				{
 					return _finiteStateSource->GetSharkTiredState();
 				}
-				//if (actor->num_perceived_actors() != 0)
-				//{
-				//	for (auto& it = actor->begin_perceived(); it != actor->end_perceived(); ++it)
-				//	{
-				//		if (actor->GetActorType() == play::Boat)
-				//		{
-				//			return _finiteStateSource->GetSharkSwimmingState();
-				//		}
-				//		return _finiteStateSource->GetSharkHuntingState();
-				//	}
-				//}
+
+				// If the shark perceives anything
+				if (actor->num_perceived_actors() != 0)
+				{
+					for (auto& it = actor->begin_perceived(); it != actor->end_perceived(); ++it)
+					{
+						// If its a boat, flee
+						if (actor->GetActorType() == play::Boat)
+						{
+							return _finiteStateSource->GetSharkSwimmingState();
+						}
+
+						// Else hunt the perceived actor
+						std::cout << "Shark goes hunting";
+						return _finiteStateSource->GetSharkHuntingState();
+					}
+				}
 				// Als boat binnen 50 pixels is, retourneer SharkFearedState
 
 				// Als pig binnen 100 pixels i, retourneer SharkHuntingState

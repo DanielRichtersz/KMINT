@@ -127,35 +127,35 @@ namespace kmint {
 			return {};
 		}
 
-		//float GetPathTotalCost(std::vector<const map::map_node*> path)
-		//{
-		//	float totalCost = 0;
+		float GetPathTotalCost(std::vector<const map::map_node*> path)
+		{
+			float totalCost = 0;
 
-		//	for (int y = 0; y < path.size(); y++)
-		//	{
-		//		for (auto e = path[y]->begin(); e != path[y]->end(); ++e)
-		//		{
-		//			totalCost += e->weight();
-		//		}
-		//	}
-		//	return totalCost;
-		//}
+			for (int y = 0; y < path.size(); y++)
+			{
+				for (auto e = path[y]->begin(); e != path[y]->end(); ++e)
+				{
+					totalCost += e->weight();
+				}
+			}
+			return totalCost;
+		}
 
-		//const map::map_node* FindNearestNodeToLocation(map::map_graph const &graph, math::vector2d location)
-		//{
-		//	float currentCost = std::numeric_limits<float>::max();
-		//	const map::map_node* targetNode;
+		const map::map_node* FindNearestNodeToLocation(map::map_graph const &graph, math::vector2d location)
+		{
+			float currentCost = std::numeric_limits<float>::max();
+			const map::map_node* targetNode;
 
-		//	for (std::size_t i = 0; i < graph.num_nodes(); ++i) {
-		//		float cost = distance(location, graph[i].location());
-		//		if (abs(cost) < abs(currentCost))
-		//		{
-		//			currentCost = cost;
-		//			targetNode = &graph[i];
-		//		}
-		//	}
-		//	return targetNode;
-		//}
+			for (std::size_t i = 0; i < graph.num_nodes(); ++i) {
+				float cost = distance(location, graph[i].location());
+				if (abs(cost) < abs(currentCost))
+				{
+					currentCost = cost;
+					targetNode = &graph[i];
+				}
+			}
+			return targetNode;
+		}
 
 		//std::vector<const map::map_node*> DijkstraShortestPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endRoom) {
 		//	std::map<const map::map_node*, std::pair<const map::map_node*, float>> cost;
