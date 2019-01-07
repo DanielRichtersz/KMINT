@@ -5,7 +5,6 @@
 #include "kmint/play.hpp"
 #include "kmint/primitives.hpp"
 #include "FiniteStateMachine.hpp"
-#include "SharkStateConditions.hpp"
 
 namespace kmint {
 	namespace pigisland {
@@ -28,7 +27,6 @@ namespace kmint {
 			map::map_node const *resting_place_;
 			delta_time t_since_move_{};
 			FiniteStateMachine _finiteStateMachine;
-			SharkStateConditions _sharkStateConditions;
 		};
 
 	} // namespace pigisland
