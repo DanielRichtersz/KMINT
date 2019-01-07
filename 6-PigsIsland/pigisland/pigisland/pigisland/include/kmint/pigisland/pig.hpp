@@ -21,9 +21,11 @@ namespace kmint {
 			bool isFreeRoamingActor() override { return true; };
 			void setGenes(pigisland::PigGenes gene) override { _FlockingPig = gene; };
 			void reset() override;
+			math::vector2d heading() const override { return _heading; };
 
 		private:
 			play::image_drawable drawable_;
+			math::vector2d _heading;
 			PigGenes _FlockingPig;
 			ForceCalculator _FDEPig;
 		};
