@@ -14,7 +14,10 @@ namespace kmint {
 			
 			bool incorporeal() const override { return false; }
 			scalar radius() const override { return 16.0; }
+			scalar range_of_perception() const override { return 100.0; };
+			
 			void act(delta_time dt) override;
+			bool perceptive() const override { return true; };
 
 		private:
 			play::image_drawable drawable_;

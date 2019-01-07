@@ -163,8 +163,15 @@ public:
     return util::wrap_iterator<actor const>(perceived_set_.end(),
                                             deref_actor_const);
   }
+  void FleeLocation(math::vector2d* _fleeLocation) { fleeLocation = *_fleeLocation;}
+  void SeekLocation(math::vector2d* _seekLocation) { seekLocation = *_seekLocation;}
+  math::vector2d FleeLocation() const { return fleeLocation; };
+  math::vector2d SeekLocation() const { return seekLocation; };
 
 private:
+  math::vector2d fleeLocation{-1.0f, -1.0f};
+  math::vector2d seekLocation{-1.0f, -1.0f};
+
   std::vector<actor *> collision_set_;
   std::vector<actor *> perceived_set_;
   static actor &deref_actor(actor *ptr) { return *ptr; }

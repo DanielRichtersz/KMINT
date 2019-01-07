@@ -72,10 +72,10 @@ public:
 
   friend class basic_graph<NodeInfo>;
 
-private:
   explicit basic_node(std::size_t id, math::vector2d loc) noexcept(
       std::is_nothrow_default_constructible<NodeInfo>::value)
       : node_id_{id}, location_{loc} {};
+private:
   basic_node(std::size_t id, math::vector2d loc, NodeInfo const &info) noexcept(
       std::is_nothrow_copy_constructible<NodeInfo>::value)
       : node_id_{id}, location_{loc}, node_info_{info} {};

@@ -2,8 +2,8 @@
 #define KMINT_PIGISLAND_PIG_HPP
 
 #include "kmint/play.hpp"
-#include "kmint/pigisland/Flocking/FlockingPig.hpp"
-#include "kmint/pigisland/FDE/FDEPig.hpp"
+#include "FDE/FDEPig.hpp"
+#include "Flocking/FlockingPig.hpp"
 
 namespace kmint {
 	namespace pigisland {
@@ -15,11 +15,11 @@ namespace kmint {
 			void move(math::vector2d delta) { location(location() + delta); }
 			void act(delta_time dt) override;
 			bool perceptive() const override { return true; }
-			scalar range_of_perception() const override { return 30.0f; }
+			scalar range_of_perception() const override { return 100.0f; }
 
 		private:
 			play::image_drawable drawable_;
-			//FlockingPig _FlockingPig;
+			FlockingPig _FlockingPig;
 			FDEPig _FDEPig;
 		};
 

@@ -2,6 +2,7 @@
 #include "kmint/pigisland/node_algorithm.hpp"
 #include "kmint/pigisland/resources.hpp"
 #include "kmint/random.hpp"
+#include <iostream>
 
 namespace kmint {
 	namespace pigisland {
@@ -11,6 +12,17 @@ namespace kmint {
 			drawable_{ *this, boat_image() } /*, map_{&g}*/ {}
 
 		void boat::act(delta_time dt) {
+			for (auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
+			{
+
+				if (itr->incorporeal())
+				{
+					auto loc = &location();
+					itr->SeekLocation(loc);
+				}
+
+			}
+
 			t_since_move_ += dt;
 			if (to_seconds(t_since_move_) >= waiting_time(node())) {
 				//node(random_adjacent_node(node()));
@@ -25,7 +37,8 @@ namespace kmint {
 				}
 				
 				if (destinationNode() != nullptr) {
-					std::vector<const map::map_node*> tempVector = DijkstraShortestPath(graph(), &node(), destinationNode());
+					auto dest = destinationNode();
+					std::vector<const map::map_node*> tempVector = AstarPath(graph(), &node(), dest);
 					nextNode = tempVector.at(1);
 				}
 
