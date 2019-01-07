@@ -1,13 +1,14 @@
 #ifndef PIGISLAND_FINITESTATESSOURCE_HPP
 #define PIGISLAND_FINITESTATESSOURCE_HPP
 
-#include "kmint/play.hpp"
 #include "SharkSwimmingState.hpp"
 #include "SharkHuntingState.hpp"
 #include "SharkTiredState.hpp"
+#include "shark.hpp"
 
 namespace kmint {
 	namespace pigisland {
+		class shark;
 		class FiniteStatesSource {
 		public:
 			explicit FiniteStatesSource() {
@@ -28,7 +29,7 @@ namespace kmint {
 				return _sharkSwimmingState;
 			}
 
-			SharkHuntingState* GetSharkHuntingState(kmint::play::map_bound_actor* actor)
+			SharkHuntingState* GetSharkHuntingState(kmint::pigisland::shark* actor)
 			{
 				return _sharkHuntingState;
 			}

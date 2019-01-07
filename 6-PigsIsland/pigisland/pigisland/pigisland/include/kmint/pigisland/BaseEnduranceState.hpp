@@ -28,7 +28,7 @@ namespace kmint
 
 			void moveEnduranceEffect()
 			{
-				_remainingEndurance = _remainingEndurance <= 0 ? 0 : --_remainingEndurance;
+				_remainingEndurance = _remainingEndurance <= 0 ? 0 : _remainingEndurance - 10;
 				std::cout << "Endurance: " << _remainingEndurance << std::endl;
 			}
 				

@@ -8,7 +8,7 @@ namespace pigisland {
 		: play::map_bound_actor{ g, find_shark_resting_place(g) },
 		drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node())
 	{
-		_finiteStateMachine.setState(_finiteStateMachine.GetSharkState(this));
+		_actorType = Shark;
 	}
 
 
@@ -29,13 +29,6 @@ void shark::act(delta_time dt) {
   //If mag bewegen
   if (to_seconds(t_since_move_) >= waiting_time(node())) {
 	  
-	  const map::map_node* nextNode = nullptr;
-
-	  _finiteStateMachine.setState(_finiteStateMachine.GetSharkState(this));
-	  if (_finiteStateMachine.getState() != nullptr)
-	  {
-		  _finiteStateMachine.getState()->Execute(this);
-	  }
 	  //num_colliding_actors();
 
 	  //if (destinationNode() == nullptr) {

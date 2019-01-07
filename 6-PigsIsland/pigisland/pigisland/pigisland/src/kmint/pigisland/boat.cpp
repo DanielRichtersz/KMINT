@@ -9,7 +9,10 @@ namespace kmint {
 
 		boat::boat(kmint::map::map_graph &g)
 			: play::map_bound_actor{ g, find_random_mooring_place(g) },
-			drawable_{ *this, boat_image() } /*, map_{&g}*/ {}
+			drawable_{ *this, boat_image() } /*, map_{&g}*/
+		{
+			_actorType = Boat;
+		}
 
 		void boat::act(delta_time dt) {
 			for (auto &itr = begin_perceived(); itr != end_perceived(); ++itr)

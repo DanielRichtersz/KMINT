@@ -24,7 +24,11 @@ namespace kmint {
 		} // namespace
 
 		pig::pig(math::vector2d location)
-			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() } {_FDEPig.setMass(20); }
+			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }
+		{
+			_FDEPig.setMass(20);
+			_actorType = Pig;
+		}
 		//: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(FlockingPig{}), _FDEPig(FDEPig{}) {}
 
 		void pig::act(delta_time dt) {
@@ -32,7 +36,7 @@ namespace kmint {
 
 			auto oldLocation = location();
 
-			if(FleeLocation().x() != -1.0f)
+			if (FleeLocation().x() != -1.0f)
 			{
 				auto fleeLocation = FleeLocation();
 
@@ -41,7 +45,7 @@ namespace kmint {
 				FleeLocation(&math::vector2d{ -1.0f, -1.0f });
 			}
 
-			if(SeekLocation().x() != -1.0f)
+			if (SeekLocation().x() != -1.0f)
 			{
 				auto seekLocation = SeekLocation();
 
@@ -50,7 +54,7 @@ namespace kmint {
 				SeekLocation(&math::vector2d{ -1.0f, -1.0f });
 			}
 
-			for ( auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
+			for (auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
 			{
 
 				_FDEPig.addForce((location() - itr->location()) * _FlockingPig.getAlignment() * _FlockingPig.getCohesion());

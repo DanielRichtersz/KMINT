@@ -2,8 +2,6 @@
 #define PIGISLAND_FINITESTATEMACHINE_HPP
 
 #include "BaseEnduranceState.hpp"
-#include "kmint/play.hpp"
-#include "FiniteStatesSource.hpp"
 #include "SharkStateConditions.hpp"
 
 namespace kmint {
@@ -23,6 +21,7 @@ namespace kmint {
 		private:
 			kmint::pigisland::BaseEnduranceState* _currentState;
 			SharkStateConditions _sharkStateConditions;
+
 		};
 	}
 }

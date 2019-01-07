@@ -2,7 +2,7 @@
 #define KMINT_PIGISLAND_SHARKSTATECONDITIONS_HPP
 #include "node_algorithm.hpp"
 #include "SharkBaseState.hpp"
-#include "kmint/play.hpp"
+#include "FiniteStatesSource.hpp"
 #include <iostream>
 namespace kmint
 {

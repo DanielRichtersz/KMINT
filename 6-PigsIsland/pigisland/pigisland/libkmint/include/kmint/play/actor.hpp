@@ -8,6 +8,7 @@
 #include <functional>
 #include <iterator>
 #include <vector>
+#include "../../../../pigisland/include/kmint/pigisland/ActorType.hpp"
 
 namespace kmint::ui {
 class drawable;
@@ -166,7 +167,10 @@ public:
   void FleeLocation(math::vector2d* _fleeLocation) { fleeLocation = *_fleeLocation;}
   void SeekLocation(math::vector2d* _seekLocation) { seekLocation = *_seekLocation;}
   math::vector2d FleeLocation() const { return fleeLocation; };
-  math::vector2d SeekLocation() const { return seekLocation; };
+  math::vector2d SeekLocation() const { return seekLocation; }
+  const pigisland::ActorType GetActorType() { return _actorType; }
+protected:
+  pigisland::ActorType _actorType;
 
 private:
   math::vector2d fleeLocation{-1.0f, -1.0f};
