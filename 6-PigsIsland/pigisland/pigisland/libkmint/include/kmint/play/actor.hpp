@@ -8,14 +8,14 @@
 #include <functional>
 #include <iterator>
 #include <vector>
-#include "../../../../pigisland/include/kmint/pigisland/Flocking/FlockingPig.hpp"
+#include "../../../../pigisland/include/kmint/pigisland/Flocking/PigGenes.hpp"
 
 namespace kmint::ui {
 class drawable;
 }
 namespace kmint::pigisland
 {
-class FlockingPig;
+class PigGenes;
 }
 namespace kmint::play {
 
@@ -175,8 +175,8 @@ public:
   void save() { saved = true; }
   bool isKilled() const { return killed; }
   bool isSaved() const { return saved; }
-  virtual pigisland::FlockingPig getPig() { return {}; };
-  virtual void setGenes(pigisland::FlockingPig gene){};
+  virtual pigisland::PigGenes getPig() { return {}; };
+  virtual void setGenes(pigisland::PigGenes gene){};
 
   virtual bool isFreeRoamingActor() { return false; }
   virtual void reset()

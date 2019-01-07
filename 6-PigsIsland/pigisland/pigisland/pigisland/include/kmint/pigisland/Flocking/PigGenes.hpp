@@ -5,9 +5,9 @@
 namespace kmint {
 	namespace pigisland {
 
-		class FlockingPig {
+		class PigGenes {
 		public:
-			FlockingPig() {
+			PigGenes() {
 				_attractionToBoat = random_scalar(-1, 1);
 				_attractionToShark = random_scalar(-1, 1);
 				_cohesion = random_scalar(0, 1);

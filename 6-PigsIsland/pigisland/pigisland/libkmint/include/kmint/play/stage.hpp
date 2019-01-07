@@ -15,7 +15,7 @@
 namespace kmint {
 namespace pigisland
 {
-class FlockingPig;
+class PigGenes;
 class pig;
 class algs;
 }
@@ -87,7 +87,7 @@ public:
 
   void createNextGeneration() {
     std::map<int, kmint::play::actor *> pigsMap;
-    std::vector<pigisland::FlockingPig> pigGenes;
+    std::vector<pigisland::PigGenes> pigGenes;
     int i = 0;
     std::for_each(begin(), end(),
     [&i, &pigsMap, &pigGenes](play::actor &a) {
@@ -104,10 +104,10 @@ public:
 
     for (int i = 0; i < 100; i++) {
 
-      pigisland::FlockingPig PeppaPig;
-      pigisland::FlockingPig parent1 =
+      pigisland::PigGenes PeppaPig;
+      pigisland::PigGenes parent1 =
           pigGenes[random_scalar(0, pigGenes.size() - 1)];
-      pigisland::FlockingPig parent2 =
+      pigisland::PigGenes parent2 =
           pigGenes[random_scalar(0, pigGenes.size() - 1)];
 
       PeppaPig.setAlignment(random_scalar(parent1.getAlignment() - 0.1f,
