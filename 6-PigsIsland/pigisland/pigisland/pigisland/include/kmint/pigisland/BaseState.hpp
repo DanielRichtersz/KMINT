@@ -5,5 +5,8 @@ template <class T>
 class state {
 public:
 	virtual void Execute(T* actor) {};
+	virtual ~state() {};
+	state &operator=(const state& other) =  delete;
+	state &operator=(state &&) = delete;
 };
 #endif
