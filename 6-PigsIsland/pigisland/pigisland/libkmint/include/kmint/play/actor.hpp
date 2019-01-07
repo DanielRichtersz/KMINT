@@ -8,13 +8,15 @@
 #include <functional>
 #include <iterator>
 #include <vector>
+#include "../../../../pigisland/include/kmint/pigisland/Flocking/PigGenes.hpp"
 
 namespace kmint::ui {
 class drawable;
 }
-
-
-
+namespace kmint::pigisland
+{
+class PigGenes;
+}
 namespace kmint::play {
 
 using actor_id = std::size_t;
@@ -169,7 +171,20 @@ public:
   void FleeLocation(math::vector2d* _fleeLocation) { fleeLocation = *_fleeLocation;}
   void SeekLocation(math::vector2d* _seekLocation) { seekLocation = *_seekLocation;}
   math::vector2d FleeLocation() const { return fleeLocation; };
-  math::vector2d SeekLocation() const { return seekLocation; }
+  math::vector2d SeekLocation() const { return seekLocation; };
+  void kill() { killed = true; }
+  void save() { saved = true; }
+  bool isKilled() const { return killed; }
+  bool isSaved() const { return saved; }
+  virtual pigisland::PigGenes getPig() { return {}; };
+  virtual void setGenes(pigisland::PigGenes gene){};
+
+  virtual bool isFreeRoamingActor() { return false; }
+  virtual void reset()
+  { 
+    killed = false;
+    saved = false;
+  }
   const ActorType GetActorType() { return _actorType; }
 protected:
   ActorType _actorType;
@@ -177,6 +192,8 @@ protected:
 private:
   math::vector2d fleeLocation{-1.0f, -1.0f};
   math::vector2d seekLocation{-1.0f, -1.0f};
+  bool killed = false;
+  bool saved = false;
 
   std::vector<actor *> collision_set_;
   std::vector<actor *> perceived_set_;
