@@ -27,7 +27,6 @@ namespace kmint {
 			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() } {_FDEPig.setMass(20); }
 		pig::pig(math::vector2d location, FlockingPig genes)
 			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(genes) {_FDEPig.setMass(20); }
-		//: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(FlockingPig{}), _FDEPig(FDEPig{}) {}
 
 		void pig::act(delta_time dt) {
 			//pig::move(math::vector2d{ heading().x * _FDEPig.getForce().x, heading().x * _FDEPig.getForce().y });
@@ -61,11 +60,30 @@ namespace kmint {
 			for ( auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
 			{
 
-				_FDEPig.addForce((location() - itr->location()) * _FlockingPig.getAlignment() * _FlockingPig.getCohesion());
-				_FDEPig.addForce((itr->location() - location()) * _FlockingPig.getSeperation() * _FlockingPig.getCohesion());
+				_FDEPig.addForce((location() - itr->location()) * _FlockingPig.getCohesion());
+				_FDEPig.addForce((itr->location() - location()) * _FlockingPig.getSeperation());
+				_FDEPig.addForce(itr->heading() * _FlockingPig.getAlignment());
 
 			}
 			auto newLocation = location() + _FDEPig.getAcceleration();
+			_heading = _FDEPig.getAcceleration();
+			if(newLocation.x() > 928.0f)
+			{
+				newLocation.x(928.0f);
+			}
+			if(newLocation.x() < 0.0f)
+			{
+				newLocation.x(0);
+			}
+
+			if(newLocation.y() > 728.0f)
+			{
+				newLocation.y(728.0f);
+			}
+			if (newLocation.y() < 0.0f)
+			{
+				newLocation.y(0.0f);
+			}
 
 			_FDEPig.removeAllForces();
 
