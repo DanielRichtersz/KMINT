@@ -1,0 +1,480 @@
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Pigs eaten: 12
+Pigs eaten: 13
+Pigs eaten: 14
+Pigs eaten: 15
+Pigs eaten: 16
+Pigs eaten: 17
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Pigs eaten: 12
+Pigs eaten: 13
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+-----
+New generation created
+-----
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+-----
+New generation created
+-----
+Pigs eaten: 1
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+-----
+New generation created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+-----
+New generation created
+-----
