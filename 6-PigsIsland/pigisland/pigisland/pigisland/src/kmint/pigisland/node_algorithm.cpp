@@ -2,6 +2,7 @@
 #include "kmint/random.hpp"
 #include <algorithm>
 #include <map>
+#include <iostream>
 
 namespace kmint {
 	namespace pigisland {
@@ -34,13 +35,14 @@ namespace kmint {
 			return static_cast<int>(node[0].weight());
 		}
 
-		float estimate(math::basic_vector2d<kmint::scalar> origin, math::basic_vector2d<kmint::scalar> target, math::basic_vector2d<kmint::scalar> start)
+		//manhattan distance
+		float estimate(math::basic_vector2d<kmint::scalar> origin, math::basic_vector2d<kmint::scalar> target, math::basic_vector2d<kmint::scalar> start, float cost)
 		{
 			float dx, dy;
 			dx = abs(origin.x() - target.x());
 			dy = abs(origin.y() - target.y());
-			float D = 1.0f;
-			return D * (dx + dy);
+
+			return cost * (dx + dy);
 		}
 
 		std::vector<const map::map_node*> reconstructPath(std::map<const map::map_node*, const map::map_node*> cameFrom, const map::map_node* current)
@@ -66,7 +68,7 @@ namespace kmint {
 
 			std::map<const map::map_node*, DefaultMaxFloat> fScore;
 
-			fScore[startNode].val = estimate(startNode->location(), endNode->location(), startNode->location()) * 3;
+			fScore[startNode].val = estimate(startNode->location(), endNode->location(), startNode->location(), 1) * 3;
 
 			using pair_type = decltype(fScore)::value_type;
 			while(!openSet.empty())
@@ -120,7 +122,7 @@ namespace kmint {
 
 					cameFrom[currentNeigbor] = current;
 					gScore[currentNeigbor].val = tenativeGScore;
-					fScore[currentNeigbor].val = tenativeGScore + estimate(currentNeigbor->location(), endNode->location(), startNode->location());
+					fScore[currentNeigbor].val = tenativeGScore + estimate(currentNeigbor->location(), endNode->location(), startNode->location(), edge->weight());
 
 				}
 
