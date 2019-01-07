@@ -2,9 +2,9 @@
 
 namespace kmint {
 	namespace pigisland {
-		class FDEPig {
+		class ForceCalculator {
 		public:
-			FDEPig() {}
+			ForceCalculator() {}
 			//Voorlopig geen acceleration
 			void setMass(float newMass) { _mass = newMass; }
 			float getMass() { return _mass; }
@@ -30,7 +30,7 @@ namespace kmint {
 			void addForce(math::vector2d force) { _forces.emplace_back(force); }
 
 		private:
-			float _mass;
+			float _mass{};
 			std::vector<math::vector2d>_forces;
 			math::vector2d _acceleration;
 			math::vector2d _position;
