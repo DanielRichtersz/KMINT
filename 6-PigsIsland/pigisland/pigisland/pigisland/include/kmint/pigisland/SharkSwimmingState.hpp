@@ -26,8 +26,7 @@ namespace kmint
 		private:
 			void Move(kmint::play::map_bound_actor* actor)
 			{
-				actor->node(random_adjacent_node(actor->node()));
-				BaseEnduranceState::moveEnduranceEffect();
+				actor->destinationNode(random_adjacent_node(actor->node()));
 			}
 		};
 

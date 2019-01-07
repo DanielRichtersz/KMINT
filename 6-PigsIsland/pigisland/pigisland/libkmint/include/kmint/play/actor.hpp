@@ -19,7 +19,7 @@ namespace kmint::play {
 
 using actor_id = std::size_t;
 
-enum ActorType { Shark, Boat, Pig };
+enum ActorType { Unknown, Shark, Boat, Pig };
 class actor {
 public:
   actor() = default;

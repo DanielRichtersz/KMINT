@@ -3,57 +3,70 @@
 #include "kmint/pigisland/resources.hpp"
 
 namespace kmint {
-namespace pigisland {
-	shark::shark(kmint::map::map_graph &g)
-		: play::map_bound_actor{ g, find_shark_resting_place(g) },
-		drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node())
-	{
-		_actorType = play::ActorType::Shark;
-	}
+	namespace pigisland {
+		shark::shark(kmint::map::map_graph &g)
+			: play::map_bound_actor{ g, find_shark_resting_place(g) },
+			drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node())
+		{
+			_actorType = play::ActorType::Shark;
+		}
 
 
-void shark::act(delta_time dt) {
-  t_since_move_ += dt;
+		void shark::act(delta_time dt) {
+			t_since_move_ += dt;
 
-  for(auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
-  {
-	  
-	  if(itr->incorporeal())
-	  {
-		  itr->FleeLocation(&location());
-	  }
+			for (auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
+			{
 
-  }
+				if (itr->incorporeal())
+				{
+					itr->FleeLocation(&location());
+				}
+
+			}
 
 
-  //If mag bewegen
-  if (to_seconds(t_since_move_) >= waiting_time(node())) {
-	  
-	  //num_colliding_actors();
+			//If mag bewegen
+			if (to_seconds(t_since_move_) >= waiting_time(node())) {
 
-	  //if (destinationNode() == nullptr) {
-		 // destinationNode(find_random_mooring_place(graph()));
-	  //}
+				//num_colliding_actors();
 
-	  //while (math::distance(destinationNode()->location(), node().location()) == 0) {
-		 // destinationNode(find_random_mooring_place(graph()));
-	  //}
+				//if (destinationNode() == nullptr) {
+				   // destinationNode(find_random_mooring_place(graph()));
+				//}
 
-	  //if (destinationNode() != nullptr) {
-		 // std::vector<const map::map_node*> tempVector = DijkstraShortestPath(graph(), &node(), destinationNode());
-		 // nextNode = tempVector.at(1);
-	  //}
+				//while (math::distance(destinationNode()->location(), node().location()) == 0) {
+				   // destinationNode(find_random_mooring_place(graph()));
+				//}
 
-	  ////If next node exists, move to that node
-	  //if (nextNode != nullptr) {
-		 // node(*nextNode);
-	  //}
-	  //else { //Move to random node, should never happen unless something goes really wrong
-		 // node(random_adjacent_node(node()));
-	  //}
-	  t_since_move_ = from_seconds(0);
-  }
-}
+				//if (destinationNode() != nullptr) {
+				   // std::vector<const map::map_node*> tempVector = DijkstraShortestPath(graph(), &node(), destinationNode());
+				   // nextNode = tempVector.at(1);
+				//}
 
-} // namespace pigisland
+				////If next node exists, move to that node
+				//if (nextNode != nullptr) {
+				   // node(*nextNode);
+				//}
+				//else { //Move to random node, should never happen unless something goes really wrong
+				   // node(random_adjacent_node(node()));
+				//}
+
+				std::vector<const map::map_node*> tempPath = AstarPath(graph(), &node(), destinationNode());
+				auto nextNode = tempPath[1];
+				if (nextNode != nullptr)
+				{
+					node(*nextNode);
+				}
+				else
+				{
+					node(random_adjacent_node(node()));
+				}
+				moveEnduranceEffect();
+
+				t_since_move_ = from_seconds(0);
+			}
+		}
+
+	} // namespace pigisland
 } // namespace kmint

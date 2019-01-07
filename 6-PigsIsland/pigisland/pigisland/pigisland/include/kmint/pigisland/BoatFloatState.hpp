@@ -1,20 +1,20 @@
-#ifndef KMINT_PIGISLAND_SHARKTIREDSTATE_HPP
-#define KMINT_PIGISLAND_SHARKTIREDSTATE_HPP
+#ifndef KMINT_PIGISLAND_BOATFLOATSTATE_HPP
+#define KMINT_PIGISLAND_BOATFLOATSTATE_HPP
 #include "node_algorithm.hpp"
-#include "SharkBaseState.hpp"
+#include "BoatBaseState.hpp"
 #include "kmint/play.hpp"
 #include <iostream>
 namespace kmint
 {
 	namespace pigisland
 	{
-		class SharkTiredState : public kmint::pigisland::SharkBaseState {
+		class BoatFloatState : public kmint::pigisland::BoatBaseState {
 		public:
-			SharkTiredState() = default;;
+			BoatFloatState() = default;
 
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
-				std::cout << "Shark is tired, returning to resting place" << std::endl;
+				std::cout << "Boat is floating around" << std::endl;
 
 				//Check if state needs replacing
 
@@ -26,7 +26,7 @@ namespace kmint
 		private:
 			void Move(kmint::play::map_bound_actor* actor)
 			{
-				actor->destinationNode(find_shark_resting_place(actor->graph()));
+				actor->destinationNode(random_adjacent_node(actor->node()));
 			}
 		};
 

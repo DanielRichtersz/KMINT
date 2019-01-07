@@ -34,7 +34,6 @@ namespace kmint
 				if (_targetNode != nullptr)
 				{
 					actor->destinationNode(*_targetNode);
-					BaseEnduranceState::increaseEndurance(-1);
 				}
 			}
 

@@ -1,8 +1,8 @@
 #ifndef PIGISLAND_FINITESTATEMACHINE_HPP
 #define PIGISLAND_FINITESTATEMACHINE_HPP
 
-#include "BaseEnduranceState.hpp"
 #include "SharkStateConditions.hpp"
+#include "BoatStateConditions.hpp"
 
 namespace kmint {
 	namespace pigisland {
@@ -13,14 +13,13 @@ namespace kmint {
 
 			}
 
-			void setState(kmint::pigisland::BaseEnduranceState* state) { _currentState = state; }
+			SharkBaseState* SetBoatDestination(kmint::play::map_bound_actor* actor) { return _sharkStateConditions.GetSharkState(actor); }
+			BoatBaseState* SetSharkDestination(kmint::play::map_bound_actor* actor) { return _boatStateConditions.GetBoatState(actor); }
 
-			kmint::pigisland::BaseEnduranceState* getState() const { return _currentState; }
-			SharkBaseState* GetSharkState(kmint::play::map_bound_actor* actor) { return _sharkStateConditions.GetSharkState(actor); }
 
 		private:
-			kmint::pigisland::BaseEnduranceState* _currentState;
 			SharkStateConditions _sharkStateConditions;
+			BoatStateConditions _boatStateConditions;
 
 		};
 	}

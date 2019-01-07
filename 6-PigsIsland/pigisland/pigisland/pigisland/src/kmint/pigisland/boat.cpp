@@ -15,6 +15,8 @@ namespace kmint {
 		}
 
 		void boat::act(delta_time dt) {
+
+			// Pass to pigs the location of boat
 			for (auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
 			{
 
@@ -27,31 +29,21 @@ namespace kmint {
 			}
 
 			t_since_move_ += dt;
+
+			// FSM
 			if (to_seconds(t_since_move_) >= waiting_time(node())) {
-				//node(random_adjacent_node(node()));
-				const map::map_node* nextNode = nullptr;
 
-				if (destinationNode() == nullptr) {
-					destinationNode(find_random_mooring_place(graph()));
-				}
-
-				while (math::distance(destinationNode()->location(), node().location()) == 0) {
-					destinationNode(find_random_mooring_place(graph()));
-				}
-				
-				if (destinationNode() != nullptr) {
-					auto dest = destinationNode();
-					std::vector<const map::map_node*> tempVector = AstarPath(graph(), &node(), dest);
-					nextNode = tempVector.at(1);
-				}
-
-				//If next node exists, move to that node
-				if (nextNode != nullptr) {
+				std::vector<const map::map_node*> tempPath = AstarPath(graph(), &node(), destinationNode());
+				auto nextNode = tempPath[1];
+				if (nextNode != nullptr)
+				{
 					node(*nextNode);
 				}
-				else { //Move to random node, should never happen unless something goes really wrong
+				else
+				{
 					node(random_adjacent_node(node()));
 				}
+				moveEnduranceEffect();
 
 				t_since_move_ = from_seconds(0);
 			}
