@@ -4,9 +4,9 @@
 
 namespace kmint {
 	namespace pigisland {
-		shark::shark(kmint::map::map_graph &g, play::stage &stage)
+		shark::shark(kmint::map::map_graph &g)
 			: play::map_bound_actor{ g, find_shark_resting_place(g) },
-			drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node()), _stage(stage)
+			drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node())
 		{
 			_actorType = play::ActorType::Shark;
 		}

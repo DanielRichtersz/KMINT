@@ -10,7 +10,7 @@ namespace kmint {
 
 		class shark : public play::map_bound_actor {
 		public:
-			shark(kmint::map::map_graph &g, play::stage &stage);
+			shark(kmint::map::map_graph &g);
 			ui::drawable const &drawable() const override { return drawable_; }
 			bool incorporeal() const override { return false; }
 			scalar radius() const override { return 16.0; }
