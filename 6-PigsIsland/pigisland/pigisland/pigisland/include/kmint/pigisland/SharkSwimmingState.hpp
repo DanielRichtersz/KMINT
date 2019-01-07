@@ -14,18 +14,7 @@ namespace kmint
 
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
-				std::cout << "Shark is swimming around" << std::endl;
-
-				//Check if state needs replacing
-
-				//Move actor
-				Move(actor);
-				
-			}
-
-		private:
-			void Move(kmint::play::map_bound_actor* actor)
-			{
+				//std::cout << "Shark is swimming around" << std::endl;
 				actor->destinationNode(random_adjacent_node(actor->node()));
 			}
 		};

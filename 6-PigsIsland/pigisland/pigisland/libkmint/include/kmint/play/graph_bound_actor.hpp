@@ -44,6 +44,7 @@ public:
     }
 
     int getEndurance() { return _remainingEndurance; }
+    int getMaxEndurance() { return _maxEndurance; }
 
 private:
   Graph const *graph_;

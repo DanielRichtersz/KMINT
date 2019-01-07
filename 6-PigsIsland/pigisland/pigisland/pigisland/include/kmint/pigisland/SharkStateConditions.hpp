@@ -19,15 +19,29 @@ namespace kmint
 
 			SharkBaseState* GetSharkState(kmint::play::map_bound_actor* actor)
 			{
-				// Als boat binnen 50 pixels is, retourneer SharkFearedState
-
-				// Als pig binnen 100 pixels i, retourneer SharkHuntingState
-
-				// Als shark 0 endurance heeft, retourneer 
+				// Als shark 0 endurance heeft, retourneer SharkTiredState
 				if (actor->getEndurance() <= 0)
 				{
 					return _finiteStateSource->GetSharkTiredState();
 				}
+				//if (actor->num_perceived_actors() != 0)
+				//{
+				//	for (auto& it = actor->begin_perceived(); it != actor->end_perceived(); ++it)
+				//	{
+				//		if (actor->GetActorType() == play::Boat)
+				//		{
+				//			return _finiteStateSource->GetSharkSwimmingState();
+				//		}
+				//		return _finiteStateSource->GetSharkHuntingState();
+				//	}
+				//}
+				// Als boat binnen 50 pixels is, retourneer SharkFearedState
+
+				// Als pig binnen 100 pixels i, retourneer SharkHuntingState
+
+
+
+
 				return _finiteStateSource->GetSharkSwimmingState();
 			}
 

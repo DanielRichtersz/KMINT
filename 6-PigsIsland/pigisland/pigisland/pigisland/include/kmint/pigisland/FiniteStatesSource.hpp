@@ -6,6 +6,7 @@
 #include "SharkTiredState.hpp"
 #include "shark.hpp"
 #include "BoatFloatState.hpp"
+#include "BoatRepairState.hpp"
 
 namespace kmint {
 	namespace pigisland {
@@ -17,6 +18,7 @@ namespace kmint {
 				_sharkSwimmingState = new SharkSwimmingState();
 				_sharkTiredState = new SharkTiredState();
 				_boatFloatState = new BoatFloatState();
+				_boatRepairState = new BoatRepairState();
 			}
 
 			~FiniteStatesSource()
@@ -24,6 +26,8 @@ namespace kmint {
 				delete _sharkHuntingState;
 				delete _sharkSwimmingState;
 				delete _sharkTiredState;
+				delete _boatFloatState;
+				delete _boatRepairState;
 			}
 
 			SharkSwimmingState* GetSharkSwimmingState() const
@@ -31,7 +35,7 @@ namespace kmint {
 				return _sharkSwimmingState;
 			}
 
-			SharkHuntingState* GetSharkHuntingState(kmint::pigisland::shark* actor)
+			SharkHuntingState* GetSharkHuntingState() const
 			{
 				return _sharkHuntingState;
 			}
@@ -46,11 +50,17 @@ namespace kmint {
 				return _boatFloatState;
 			}
 
+			BoatRepairState* GetBoatRepairState() const
+			{
+				return _boatRepairState;
+			}
+
 		private:
 			SharkSwimmingState* _sharkSwimmingState;
 			SharkHuntingState* _sharkHuntingState;
 			SharkTiredState* _sharkTiredState;
 			BoatFloatState* _boatFloatState;
+			BoatRepairState* _boatRepairState;
 		};
 	}
 }

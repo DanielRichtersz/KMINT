@@ -4,40 +4,58 @@
 #include "SharkBaseState.hpp"
 #include "kmint/play.hpp"
 #include <iostream>
+#include "pig.hpp"
+#include "../../../../dependencies/SDL2/include/SDL_opengles2_gl2ext.h"
+
 namespace kmint
 {
 	namespace pigisland
 	{
 		class SharkHuntingState : public kmint::pigisland::SharkBaseState {
 		public:
-			SharkHuntingState() { };
+			SharkHuntingState() = default;
 
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
-				std::cout << "Shark is hunting a pig" << std::endl;
+				//std::cout << "Shark is hunting a pig" << std::endl;
+				//Set Target location
+				//math::vector2d targetLocation =
 
-				//Check if state needs replacing
+				//float lowestCost = 0;
+				//const map::map_node* targetPigLocation = nullptr;
 
-				//Move actor
-				Move(actor);
+				////For all actors nearby, see if its pig
+				//for (auto& it = actor->begin_perceived(); it != actor->end_perceived(); ++it)
+				//{
+				//	if (actor->GetActorType() == play::Pig)
+				//	{
+				//		//Find nearest node to target location
+				//		const map::map_node* nearestNodeToLocation = FindNearestNodeToLocation(actor->graph(), it->location());
 
+				//		//Calculate cost to get to the nearest node near the location of the pig
+				//		std::vector<const map::map_node*> const targetToPath = AstarPath(actor->graph(), &actor->node(), nearestNodeToLocation );
+				//		
+				//		auto const cost = GetPathTotalCost(targetToPath);
+
+				//		//If cost is lower, replace target
+				//		if ( cost < lowestCost)
+				//		{
+				//			lowestCost = cost;
+				//			targetPigLocation = nearestNodeToLocation;
+				//		}
+				//	}
+				//}
+
+				////Find nearest node to target
+				//if (targetPigLocation != nullptr)
+				//{
+				//	actor->destinationNode(*targetPigLocation);
+				//}
+				//else
+				//{
+				//	actor->destinationNode(random_adjacent_node(actor->node()));
+				//}
 			}
-
-			void setTargetNode(map::map_node* targetNode)
-			{
-				_targetNode = targetNode;
-			}
-
-		private:
-			void Move(kmint::play::map_bound_actor* actor)
-			{
-				if (_targetNode != nullptr)
-				{
-					actor->destinationNode(*_targetNode);
-				}
-			}
-
-			map::map_node* _targetNode;
 		};
 
 	}

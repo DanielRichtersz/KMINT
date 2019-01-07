@@ -47,7 +47,7 @@ namespace kmint {
 		{
 			std::vector<const map::map_node*> total;
 
-			while(current != nullptr)
+			while (current != nullptr)
 			{
 				total.emplace_back(current);
 				current = cameFrom[current];
@@ -58,7 +58,7 @@ namespace kmint {
 		std::vector<const map::map_node*> AstarPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endNode)
 		{
 			std::vector<const map::map_node*> closedSet;
-			std::vector<const map::map_node*> openSet{startNode};
+			std::vector<const map::map_node*> openSet{ startNode };
 			std::map<const map::map_node*, const map::map_node*> cameFrom;
 			std::map<const map::map_node*, DefaultMaxFloat> gScore;
 
@@ -69,7 +69,7 @@ namespace kmint {
 			fScore[startNode].val = estimate(startNode->location(), endNode->location(), startNode->location()) * 3;
 
 			using pair_type = decltype(fScore)::value_type;
-			while(!openSet.empty())
+			while (!openSet.empty())
 			{
 				//get the node in open set with the lowest fScore value
 
@@ -87,7 +87,7 @@ namespace kmint {
 				}
 				)->first;
 
-				if(math::distance(current->location(), endNode->location()) == 0)
+				if (math::distance(current->location(), endNode->location()) == 0)
 				{
 					auto reversePath = reconstructPath(cameFrom, current);
 					std::reverse(reversePath.begin(), reversePath.end());
@@ -99,17 +99,17 @@ namespace kmint {
 				openSet.erase(itr);
 				closedSet.emplace_back(current);
 
-				for(auto &edge = current->begin(); edge !=current->end(); ++edge)
+				for (auto &edge = current->begin(); edge != current->end(); ++edge)
 				{
 					auto currentNeigbor = &edge->to();
-					if(std::find(closedSet.begin(), closedSet.end(), currentNeigbor) != closedSet.end())
+					if (std::find(closedSet.begin(), closedSet.end(), currentNeigbor) != closedSet.end())
 					{
 						continue;
 					}
 
 					auto tenativeGScore = gScore[current].val + math::distance(current->location(), endNode->location());
 
-					if(std::find(openSet.begin(), openSet.end(), currentNeigbor) == openSet.end())
+					if (std::find(openSet.begin(), openSet.end(), currentNeigbor) == openSet.end())
 					{
 						openSet.emplace_back(currentNeigbor);
 					}
@@ -123,11 +123,39 @@ namespace kmint {
 					fScore[currentNeigbor].val = tenativeGScore + estimate(currentNeigbor->location(), endNode->location(), startNode->location());
 
 				}
-
 			}
-
 			return {};
 		}
+
+		//float GetPathTotalCost(std::vector<const map::map_node*> path)
+		//{
+		//	float totalCost = 0;
+
+		//	for (int y = 0; y < path.size(); y++)
+		//	{
+		//		for (auto e = path[y]->begin(); e != path[y]->end(); ++e)
+		//		{
+		//			totalCost += e->weight();
+		//		}
+		//	}
+		//	return totalCost;
+		//}
+
+		//const map::map_node* FindNearestNodeToLocation(map::map_graph const &graph, math::vector2d location)
+		//{
+		//	float currentCost = std::numeric_limits<float>::max();
+		//	const map::map_node* targetNode;
+
+		//	for (std::size_t i = 0; i < graph.num_nodes(); ++i) {
+		//		float cost = distance(location, graph[i].location());
+		//		if (abs(cost) < abs(currentCost))
+		//		{
+		//			currentCost = cost;
+		//			targetNode = &graph[i];
+		//		}
+		//	}
+		//	return targetNode;
+		//}
 
 		//std::vector<const map::map_node*> DijkstraShortestPath(map::map_graph const &graph, const map::map_node* startNode, const map::map_node* endRoom) {
 		//	std::map<const map::map_node*, std::pair<const map::map_node*, float>> cost;

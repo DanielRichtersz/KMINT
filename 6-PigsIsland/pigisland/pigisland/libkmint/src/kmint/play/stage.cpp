@@ -1,8 +1,8 @@
 #include "kmint/play/stage.hpp"
+#include "../../../../pigisland/include/kmint/pigisland/boat.hpp"
 #include "../../../../pigisland/include/kmint/pigisland/shark.hpp"
 #include "kmint/play/actor.hpp"
 #include <algorithm>
-#include "../../../../pigisland/include/kmint/pigisland/boat.hpp"
 
 namespace kmint {
 namespace play {
@@ -33,20 +33,25 @@ void check_interactions(ForwardIt begin, ForwardIt end) {
 } // namespace
 
 void stage::act(delta_time dt) {
-  //system("CLS");
-  std::cout << "---------------------------------------------------" << std::endl;
+  // system("CLS");
+  //std::cout << "---------------------------------------------------" << std::endl;
   check_interactions(begin(), end());
 
   for (actor &a : *this) {
     if (a.GetActorType() == ActorType::Shark) {
-      pigisland::shark &sharkActor = dynamic_cast<pigisland::shark&>(a);
-      _finiteStateMachine.SetSharkDestination(&sharkActor)->Execute(&sharkActor);
+      pigisland::shark &sharkActor = dynamic_cast<pigisland::shark &>(a);
+      if (&sharkActor != nullptr) {
+        _finiteStateMachine.SetSharkDestination(&sharkActor)
+            ->Execute(&sharkActor);
+      }
     }
 
     if (a.GetActorType() == ActorType::Boat) {
       pigisland::boat &boatActor = dynamic_cast<pigisland::boat &>(a);
-      _finiteStateMachine.SetBoatDestination(&boatActor)->Execute(&boatActor);
+      if (&boatActor != nullptr) {
+        _finiteStateMachine.SetBoatDestination(&boatActor)->Execute(&boatActor);
       }
+    }
     a.act(dt);
   }
   std::for_each(begin(), end(), [](actor &a) {

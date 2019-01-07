@@ -13,8 +13,8 @@ namespace kmint {
 
 			}
 
-			SharkBaseState* SetBoatDestination(kmint::play::map_bound_actor* actor) { return _sharkStateConditions.GetSharkState(actor); }
-			BoatBaseState* SetSharkDestination(kmint::play::map_bound_actor* actor) { return _boatStateConditions.GetBoatState(actor); }
+			BoatBaseState* SetBoatDestination(kmint::play::map_bound_actor* actor) { return _boatStateConditions.GetBoatState(actor); }
+			SharkBaseState* SetSharkDestination(kmint::play::map_bound_actor* actor) { return _sharkStateConditions.GetSharkState(actor); }
 
 
 		private:

@@ -20,12 +20,11 @@ namespace kmint
 
 			BoatBaseState* GetBoatState(kmint::play::map_bound_actor* actor)
 			{
-				// Als boat binnen 50 pixels is, retourneer SharkFearedState
-
-				// Als pig binnen 100 pixels i, retourneer SharkHuntingState
-
-				// Als shark 0 endurance heeft, retourneer 
-
+				// If boat is out of endurance, return BoatRepairState
+				if (actor->getEndurance() <= 0)
+				{
+					return _finiteStateSource->GetBoatRepairState();
+				}
 				return _finiteStateSource->GetBoatFloatState();
 			}
 
