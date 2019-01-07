@@ -35,7 +35,7 @@ void stage::act(delta_time dt) {
   check_interactions(begin(), end());
 
   for (actor &a : *this) {
-    if (a.GetActorType() == pigisland::ActorType::Shark) {
+    if (a.GetActorType() == ActorType::Shark) {
       //map_bound_actor &mbActor = (map_bound_actor &)a;
       //pigisland::shark &sharkActor = (pigisland::shark &)a;
     }

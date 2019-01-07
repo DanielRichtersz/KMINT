@@ -11,7 +11,7 @@ namespace kmint {
 			: play::map_bound_actor{ g, find_random_mooring_place(g) },
 			drawable_{ *this, boat_image() } /*, map_{&g}*/
 		{
-			_actorType = Boat;
+			_actorType = play::ActorType::Boat;
 		}
 
 		void boat::act(delta_time dt) {

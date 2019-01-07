@@ -8,16 +8,18 @@
 #include <functional>
 #include <iterator>
 #include <vector>
-#include "../../../../pigisland/include/kmint/pigisland/ActorType.hpp"
 
 namespace kmint::ui {
 class drawable;
 }
 
+
+
 namespace kmint::play {
 
 using actor_id = std::size_t;
 
+enum ActorType { Shark, Boat, Pig };
 class actor {
 public:
   actor() = default;
@@ -168,9 +170,9 @@ public:
   void SeekLocation(math::vector2d* _seekLocation) { seekLocation = *_seekLocation;}
   math::vector2d FleeLocation() const { return fleeLocation; };
   math::vector2d SeekLocation() const { return seekLocation; }
-  const pigisland::ActorType GetActorType() { return _actorType; }
+  const ActorType GetActorType() { return _actorType; }
 protected:
-  pigisland::ActorType _actorType;
+  ActorType _actorType;
 
 private:
   math::vector2d fleeLocation{-1.0f, -1.0f};

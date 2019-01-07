@@ -8,7 +8,7 @@
 #include <memory>
 #include <type_traits>
 #include <vector>
-//#include "../../../../pigisland/include/kmint/pigisland/FiniteStateMachine.hpp"
+#include "../../../../pigisland/include/kmint/pigisland/FiniteStateMachine.hpp"
 
 namespace kmint {
 namespace play {
@@ -77,7 +77,7 @@ public:
 
 private:
   container actors_;
-  //pigisland::FiniteStateMachine* _finiteStateMachine;
+  pigisland::FiniteStateMachine _finiteStateMachine;
 
 };
 } // namespace play

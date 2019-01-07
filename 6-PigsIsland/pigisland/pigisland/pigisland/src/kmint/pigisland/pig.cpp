@@ -27,7 +27,7 @@ namespace kmint {
 			: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }
 		{
 			_FDEPig.setMass(20);
-			_actorType = Pig;
+			_actorType = play::ActorType::Pig;
 		}
 		//: free_roaming_actor{ random_vector() }, drawable_{ *this, pig_image() }, _FlockingPig(FlockingPig{}), _FDEPig(FDEPig{}) {}
 

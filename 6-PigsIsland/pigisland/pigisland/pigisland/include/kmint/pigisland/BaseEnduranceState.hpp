@@ -3,6 +3,8 @@
 
 #include "../states/state_machine.hpp"
 #include <iostream>
+#include "kmint/play/graph_bound_actor.hpp"
+
 namespace kmint
 {
 	namespace pigisland

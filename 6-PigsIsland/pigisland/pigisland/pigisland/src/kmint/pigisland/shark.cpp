@@ -8,7 +8,7 @@ namespace pigisland {
 		: play::map_bound_actor{ g, find_shark_resting_place(g) },
 		drawable_{ *this, shark_image() }, map_{ &g }, resting_place_(&node())
 	{
-		_actorType = Shark;
+		_actorType = play::ActorType::Shark;
 	}
 
 
