@@ -2,6 +2,12 @@
 #include "kmint/random.hpp"
 #include <algorithm>
 #include <map>
+#include "kmint/play/actor.hpp"
+#include "kmint/pigisland/shark.hpp"
+#include "kmint/pigisland/node_algorithm.hpp"
+#include "kmint/pigisland/resources.hpp"
+#include "kmint/random.hpp"
+#include <iostream>
 
 namespace kmint {
 	namespace pigisland {
@@ -235,9 +241,11 @@ namespace kmint {
 		//		reverse = cost[reverse].first;
 		//	}
 
-		//	std::reverse(reversePath.begin(), reversePath.end());
-		//	return reversePath;
+			//std::reverse(reversePath.begin(), reversePath.end());
+			//std::map<int, int>asdf;
+			//return reversePath;
 		//}
+
 
 		//void RemoveMapNodeFromVector(std::vector<const kmint::map::map_node*> vector, const kmint::map::map_node* mapNode)
 		//{
