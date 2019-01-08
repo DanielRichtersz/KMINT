@@ -17,18 +17,19 @@ namespace kmint {
 
 			for (auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
 			{
-				if (itr->incorporeal())
+				if (!isFleeing())
 				{
-					if (math::distance(location(), itr->location()) < 16)
+					if (itr->incorporeal())
 					{
-						itr->kill();
+						if (math::distance(location(), itr->location()) < 16)
+						{
+							itr->kill();
+						}
+
+						itr->FleeLocation(&location());
 					}
-
-					itr->FleeLocation(&location());
 				}
-
 			}
-
 
 			//If mag bewegen
 			if (to_seconds(t_since_move_) >= waiting_time(node())) {
@@ -42,6 +43,11 @@ namespace kmint {
 				else
 				{
 					node(random_adjacent_node(node()));
+				}
+
+				if (isFleeing())
+				{
+					++_stepsSetWhileFleeing;
 				}
 				moveEnduranceEffect();
 

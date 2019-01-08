@@ -17,12 +17,18 @@ namespace kmint {
 			void act(delta_time dt) override;
 			scalar range_of_perception() const override { return 100.0; };
 			bool perceptive() const override { return true; };
+			bool isFleeing() { return _isFleeing; }
+			int stepsSetWhileFleeing() { return _stepsSetWhileFleeing; }
+			void resetFleeing() { _isFleeing = false; _stepsSetWhileFleeing = 0; }
 
 		private:
 			play::image_drawable drawable_;
 			map::map_graph *map_;
 			map::map_node const *resting_place_;
 			delta_time t_since_move_{};
+			bool _isFleeing = false;
+			int _stepsSetWhileFleeing = 0;
+
 		};
 
 	} // namespace pigisland
