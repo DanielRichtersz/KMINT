@@ -1,25 +1,33 @@
 #ifndef PIGISLAND_FINITESTATEMACHINE_HPP
 #define PIGISLAND_FINITESTATEMACHINE_HPP
 
-#include "BaseEnduranceState.hpp"
-#include "kmint/play.hpp"
-#include "FiniteStatesSource.hpp"
+#include "SharkStateConditions.hpp"
+#include "BoatStateConditions.hpp"
+#include "boat.hpp"
 
 namespace kmint {
 	namespace pigisland {
 		class FiniteStateMachine {
 		public:
-			explicit FiniteStateMachine() 
+			explicit FiniteStateMachine()
 			{
 
 			}
 
-			void setState(kmint::pigisland::BaseEnduranceState* state) { _currentState = state; }
+			BoatBaseState* SetBoatDestination(kmint::play::map_bound_actor* actor)
+			{
+				return _boatStateConditions.GetBoatState(actor);
+			}
+			SharkBaseState* SetSharkDestination(kmint::play::map_bound_actor* actor)
+			{
+				return _sharkStateConditions.GetSharkState(actor);
+			}
 
-			kmint::pigisland::BaseEnduranceState* getState() const { return _currentState; }
 
 		private:
-			kmint::pigisland::BaseEnduranceState* _currentState;
+			SharkStateConditions _sharkStateConditions;
+			BoatStateConditions _boatStateConditions;
+
 		};
 	}
 }

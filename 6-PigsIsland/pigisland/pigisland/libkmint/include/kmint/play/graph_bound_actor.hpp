@@ -19,15 +19,54 @@ public:
   void node(node_type const &n) noexcept { node_ = &n; }
   Graph const &graph() const noexcept { return *graph_; }
 
-    const node_type* const &destinationNode() const noexcept { return _destinationNode; }
-    void destinationNode(node_type const &destinationNode) noexcept {
-      _destinationNode = &destinationNode;
-    }
+  // Movement
+  const node_type *const &destinationNode() const noexcept {
+    return _destinationNode;
+  }
+  void destinationNode(node_type const &destinationNode) noexcept {
+    _destinationNode = &destinationNode;
+  }
+
+  // Endurance
+  void setEndurance(int remainingEndurance) {
+    _remainingEndurance = remainingEndurance;
+  };
+
+  void increaseEndurance(int amount) {
+    _remainingEndurance = (_remainingEndurance + amount) <= _maxEndurance
+                              ? _remainingEndurance += amount
+                              : _maxEndurance;
+  }
+
+  void moveEnduranceEffect() {
+    _remainingEndurance =
+        _remainingEndurance <= 0 ? 0 : _remainingEndurance - 1;
+    // std::cout << "Endurance: " << _remainingEndurance << std::endl;
+  }
+
+  int getEndurance() { return _remainingEndurance; }
+  int getMaxEndurance() { return _maxEndurance; }
+
+  bool isFleeing() { return _isFleeing; }
+  int stepsSetWhileFleeing() { return _stepsSetWhileFleeing; }
+  void resetFleeing() {
+    _isFleeing = false;
+    _stepsSetWhileFleeing = 0;
+  };
+
+protected:
+  bool _isFleeing = false;
+  int _stepsSetWhileFleeing = 0;
 
 private:
   Graph const *graph_;
   node_type const *node_;
   node_type const *_destinationNode = nullptr;
+
+  int _maxEndurance = 100;
+  int _remainingEndurance = 100;
+
+
 };
 
 using map_bound_actor = graph_bound_actor<map::map_graph>;

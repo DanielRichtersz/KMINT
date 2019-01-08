@@ -14,31 +14,21 @@ namespace kmint
 
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
-				std::cout << "Shark is tired, returning to resting place" << std::endl;
-
-				//Check if state needs replacing
-
-				//Move actor
-				Move(actor);
-
+				_reachedRestingPlace = math::distance(actor->location(), find_shark_resting_place(actor->graph()).location()) == 0;
+				if (_reachedRestingPlace)
+				{
+					actor->setEndurance(actor->getMaxEndurance());
+					//std::cout << "Shark is resting" << std::endl;
+				}
+				else
+				{
+					//std::cout << "Shark is tired, returning to resting place" << std::endl;
+					actor->destinationNode(find_shark_resting_place(actor->graph()));
+				}
 			}
 
 		private:
-			void Move(kmint::play::map_bound_actor* actor)
-			{
-				actor->destinationNode(find_shark_resting_place(actor->graph()));
-				if (actor->destinationNode() != nullptr)
-				{
-					std::vector<const map::map_node*> path = AstarPath(actor->graph(), &actor->node(), actor->destinationNode());
-					//DijkstraShortestPath(actor->graph(), &actor->node(), actor->destinationNode());
-					const map::map_node* nextNode = path.at(1);
-					if (nextNode != nullptr)
-					{
-						actor->node(*nextNode);
-						BaseEnduranceState::moveEnduranceEffect();
-					}
-				}
-			}
+			bool _reachedRestingPlace = false;
 		};
 
 	}

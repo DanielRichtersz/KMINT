@@ -1,4 +1,6 @@
 #include "kmint/play/stage.hpp"
+#include "../../../../pigisland/include/kmint/pigisland/boat.hpp"
+#include "../../../../pigisland/include/kmint/pigisland/shark.hpp"
 #include "kmint/play/actor.hpp"
 #include <algorithm>
 
@@ -31,17 +33,58 @@ void check_interactions(ForwardIt begin, ForwardIt end) {
 } // namespace
 
 void stage::act(delta_time dt) {
+  // system("CLS");
+  // std::cout << "---------------------------------------------------" <<
+  // std::endl;
   check_interactions(begin(), end());
 
   for (actor &a : *this) {
-    a.act(dt);
+    if (a.GetActorType() == ActorType::Shark) {
+      pigisland::shark &sharkActor = dynamic_cast<pigisland::shark &>(a);
 
+      if (&sharkActor != nullptr) {
+
+        if (math::distance(sharkActor.location(),
+                           sharkActor.getRestingPlace()->location()) == 0) {
+          if (sharkActor.getEndurance() == 0) {
+
+            std::cout << "Total pigs eaten: " << sharkActor.getPigsEaten()
+                      << std::endl;
+            createNextGeneration();
+            sharkActor.increaseGenerations();
+            sharkActor.resetPigsEaten();
+            std::cout << "-----" << std::endl
+                      << "Generation " << sharkActor.getGenerations()
+                      << " created" << std::endl
+                      << "-----" << std::endl;
+          }
+        }
+
+        pigisland::SharkBaseState *sharkBaseState =
+            _finiteStateMachine.SetSharkDestination(&sharkActor);
+        if (sharkBaseState != nullptr) {
+          sharkBaseState->Execute(&sharkActor);
+        }
+      }
+    }
+
+    if (a.GetActorType() == ActorType::Boat) {
+      pigisland::boat &boatActor = dynamic_cast<pigisland::boat &>(a);
+      if (&boatActor != nullptr) {
+        pigisland::BoatBaseState *boatBaseState =
+            _finiteStateMachine.SetBoatDestination(&boatActor);
+        if (boatBaseState != nullptr) {
+          boatBaseState->Execute(&boatActor);
+        }
+      }
+    }
+    a.act(dt);
   }
+
   std::for_each(begin(), end(), [](actor &a) {
     a.empty_collisions();
     a.empty_perceived();
   });
-
 }
 
 void stage::remove_actor(actor const &a) {

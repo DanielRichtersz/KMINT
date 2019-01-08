@@ -21,6 +21,7 @@ namespace kmint::play {
 
 using actor_id = std::size_t;
 
+enum ActorType { Unknown, Shark, Boat, Pig };
 class actor {
 public:
   actor() = default;
@@ -184,6 +185,9 @@ public:
     killed = false;
     saved = false;
   }
+  const ActorType GetActorType() { return _actorType; }
+protected:
+  ActorType _actorType;
 
 private:
   math::vector2d fleeLocation{-1.0f, -1.0f};

@@ -11,6 +11,7 @@
 #include <vector>
 #include <map>
 #include <iostream>
+#include "../../../../pigisland/include/kmint/pigisland/FiniteStateMachine.hpp"
 
 namespace kmint {
 namespace pigisland
@@ -132,6 +133,8 @@ public:
 private:
   std::vector<std::unique_ptr<actor>> actors_;
   container toDelete;
+  pigisland::FiniteStateMachine _finiteStateMachine;
+
 };
 } // namespace play
 } // namespace kmint

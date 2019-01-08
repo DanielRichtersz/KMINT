@@ -20,6 +20,15 @@ namespace kmint {
 					velocity += force;
 				}
 
+				if (velocity.x() > 100.0f)
+				{
+					velocity.x(100.0f);
+				}
+				if (velocity.y() > 100.0f)
+				{
+					velocity.y(100.0f);
+				}
+
 				return velocity; 
 			}
 

@@ -2,43 +2,54 @@
 #define KMINT_PIGISLAND_SHARKHUNTINGSTATE_HPP
 #include "node_algorithm.hpp"
 #include "SharkBaseState.hpp"
-#include "kmint/play.hpp"
-#include <iostream>
+
 namespace kmint
 {
 	namespace pigisland
 	{
 		class SharkHuntingState : public kmint::pigisland::SharkBaseState {
 		public:
-			SharkHuntingState() { };
+			SharkHuntingState() = default;
 
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
-				std::cout << "Shark is hunting a pig" << std::endl;
+				//std::cout << "Shark is hunting a pig" << std::endl;
 
-				//Check if state needs replacing
+				float lowestCost = 0;
+				const map::map_node* targetPigLocation = nullptr;
 
-				//Move actor
-				Move(actor);
-
-			}
-
-			void setTargetNode(map::map_node* targetNode)
-			{
-				_targetNode = targetNode;
-			}
-
-		private:
-			void Move(kmint::play::map_bound_actor* actor)
-			{
-				if (_targetNode != nullptr)
+				//For all actors nearby, see if its pig
+				for (auto& it = actor->begin_perceived(); it != actor->end_perceived(); ++it)
 				{
-					actor->destinationNode(*_targetNode);
-					BaseEnduranceState::increaseEndurance(-1);
+					if (it->GetActorType() == play::Pig)
+					{
+						//Find nearest node to target location
+						const map::map_node* nearestNodeToLocation = FindNearestNodeToLocation(actor->graph(), it->location());
+
+						//Calculate cost to get to the nearest node near the location of the pig
+						std::vector<const map::map_node*> const targetToPath = AstarPath(actor->graph(), &actor->node(), nearestNodeToLocation );
+						
+						auto const cost = GetPathTotalCost(targetToPath);
+
+						//If cost is lower, replace target
+						if ( cost < lowestCost)
+						{
+							lowestCost = cost;
+							targetPigLocation = nearestNodeToLocation;
+						}
+					}
+				}
+
+				//Find nearest node to target
+				if (targetPigLocation != nullptr)
+				{
+					actor->destinationNode(*targetPigLocation);
+				}
+				else
+				{
+					actor->destinationNode(random_adjacent_node(actor->node()));
 				}
 			}
-
-			map::map_node* _targetNode;
 		};
 
 	}
