@@ -17,12 +17,19 @@ namespace kmint {
 			void act(delta_time dt) override;
 			scalar range_of_perception() const override { return 100.0; };
 			bool perceptive() const override { return true; };
+			const map::map_node* getRestingPlace() { return resting_place_; }
+			void shark::resetPigsEaten() { pigsEaten = 0; }
+			int getPigsEaten() { return pigsEaten; }
+			void increaseGenerations() { generations++; }
+			int getGenerations() { return generations; };
 
 		private:
 			play::image_drawable drawable_;
 			map::map_graph *map_;
 			map::map_node const *resting_place_;
 			delta_time t_since_move_{};
+			int pigsEaten = 0;
+			int generations = 1;
 		};
 
 	} // namespace pigisland

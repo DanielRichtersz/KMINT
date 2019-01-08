@@ -41,7 +41,6 @@ namespace kmint
 						}
 
 						// Else hunt the perceived actor
-						std::cout << "Shark goes hunting";
 						return _finiteStateSource->GetSharkHuntingState();
 					}
 				}

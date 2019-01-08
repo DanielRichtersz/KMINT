@@ -38,10 +38,12 @@ namespace kmint {
 			if (to_seconds(t_since_move_) >= waiting_time(node())) {
 
 				std::vector<const map::map_node*> tempPath = AstarPath(graph(), &node(), destinationNode());
-				auto nextNode = tempPath[1];
-				if (nextNode != nullptr)
-				{
-					node(*nextNode);
+				if (tempPath.size() > 1) {
+					auto nextNode = tempPath[1];
+					if (nextNode != nullptr)
+					{
+						node(*nextNode);
+					}
 				}
 				else
 				{
