@@ -20,6 +20,11 @@ namespace kmint {
 			bool isFleeing() { return _isFleeing; }
 			int stepsSetWhileFleeing() { return _stepsSetWhileFleeing; }
 			void resetFleeing() { _isFleeing = false; _stepsSetWhileFleeing = 0; }
+			const map::map_node* getRestingPlace() { return resting_place_; }
+			void shark::resetPigsEaten() { pigsEaten = 0; }
+			int getPigsEaten() { return pigsEaten; }
+			void increaseGenerations() { generations++; }
+			int getGenerations() { return generations; };
 
 		private:
 			play::image_drawable drawable_;
@@ -29,6 +34,8 @@ namespace kmint {
 			bool _isFleeing = false;
 			int _stepsSetWhileFleeing = 0;
 
+			int pigsEaten = 0;
+			int generations = 1;
 		};
 
 	} // namespace pigisland

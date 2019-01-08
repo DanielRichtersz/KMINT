@@ -34,13 +34,12 @@ public:
       _remainingEndurance = (_remainingEndurance + amount) <= _maxEndurance
                                 ? _remainingEndurance += amount
                                 : _maxEndurance;
-      std::cout << "Endurance: " << _remainingEndurance << std::endl;
     }
 
     void moveEnduranceEffect() {
       _remainingEndurance =
           _remainingEndurance <= 0 ? 0 : _remainingEndurance - 1;
-      std::cout << "Endurance: " << _remainingEndurance << std::endl;
+      //std::cout << "Endurance: " << _remainingEndurance << std::endl;
     }
 
     int getEndurance() { return _remainingEndurance; }
