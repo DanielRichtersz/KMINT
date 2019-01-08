@@ -29,7 +29,6 @@ namespace kmint {
 					auto loc = &location();
 					itr->SeekLocation(loc);
 				}
-
 			}
 
 			t_since_move_ += dt;

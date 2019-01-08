@@ -13,8 +13,8 @@ namespace kmint
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
 				//std::cout << "Shark is swimming around" << std::endl;
-				//actor->destinationNode(random_adjacent_node(actor->node()));
-				actor->destinationNode(find_random_mooring_place(actor->graph()));
+				actor->destinationNode(random_adjacent_node(actor->node()));
+				//actor->destinationNode(find_random_mooring_place(actor->graph()));
 			}
 		};
 

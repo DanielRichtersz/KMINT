@@ -52,7 +52,7 @@ namespace kmint {
 
 				if (isFleeing())
 				{
-					++_stepsSetWhileFleeing;
+					_stepsSetWhileFleeing++;
 				}
 				moveEnduranceEffect();
 

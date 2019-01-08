@@ -14,8 +14,6 @@ namespace kmint
 			void Execute(kmint::play::map_bound_actor* actor) override
 			{
 				//std::cout << "Shark is hunting a pig" << std::endl;
-				//Set Target location
-				//math::vector2d targetLocation =
 
 				float lowestCost = 0;
 				const map::map_node* targetPigLocation = nullptr;

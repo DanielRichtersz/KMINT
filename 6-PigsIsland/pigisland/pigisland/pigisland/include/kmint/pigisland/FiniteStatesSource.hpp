@@ -37,21 +37,25 @@ namespace kmint {
 
 			SharkHuntingState* GetSharkHuntingState() const
 			{
+				std::cout << "Shark: Hunting" << std::endl;
 				return _sharkHuntingState;
 			}
 
 			SharkTiredState* GetSharkTiredState() const
 			{
+				std::cout << "Shark: Tired" << std::endl;
 				return _sharkTiredState;
 			}
 
 			BoatFloatState* GetBoatFloatState() const
 			{
+				std::cout << "Boat: Float" << std::endl;
 				return _boatFloatState;
 			}
 
 			BoatRepairState* GetBoatRepairState() const
 			{
+				std::cout << "Boat: Repair" << std::endl;
 				return _boatRepairState;
 			}
 

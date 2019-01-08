@@ -18,6 +18,7 @@ namespace kmint {
 			
 			void act(delta_time dt) override;
 			bool perceptive() const override { return true; };
+			bool perceivable() const override { return true; };
 
 		private:
 			play::image_drawable drawable_;

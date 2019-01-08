@@ -41,20 +41,24 @@ void stage::act(delta_time dt) {
   for (actor &a : *this) {
     if (a.GetActorType() == ActorType::Shark) {
       pigisland::shark &sharkActor = dynamic_cast<pigisland::shark &>(a);
-      if (math::distance(sharkActor.location(),
-                         sharkActor.getRestingPlace()->location()) == 0) {
-        if (sharkActor.getEndurance() == 0) {
-          // Print totalpigs
-          std::cout << "Total pigs eaten: " << sharkActor.getPigsEaten() << std::endl;
-          createNextGeneration();
-          sharkActor.increaseGenerations();
-          sharkActor.resetPigsEaten();
-          std::cout << "-----" << std::endl
-                    << "Generation " << sharkActor.getGenerations() << " created" << std::endl
-                    << "-----" << std::endl;
-        }
-      }
+
       if (&sharkActor != nullptr) {
+
+        if (math::distance(sharkActor.location(),
+                           sharkActor.getRestingPlace()->location()) == 0) {
+          if (sharkActor.getEndurance() == 0) {
+
+            std::cout << "Total pigs eaten: " << sharkActor.getPigsEaten()
+                      << std::endl;
+            createNextGeneration();
+            sharkActor.increaseGenerations();
+            sharkActor.resetPigsEaten();
+            std::cout << "-----" << std::endl
+                      << "Generation " << sharkActor.getGenerations()
+                      << " created" << std::endl
+                      << "-----" << std::endl;
+          }
+        }
 
         pigisland::SharkBaseState *sharkBaseState =
             _finiteStateMachine.SetSharkDestination(&sharkActor);

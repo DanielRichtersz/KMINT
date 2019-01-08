@@ -18,7 +18,7 @@ namespace kmint
 				if (_reachedRestingPlace)
 				{
 					actor->setEndurance(actor->getMaxEndurance());
-					//std::cout << "Shark is resting";
+					//std::cout << "Shark is resting" << std::endl;
 				}
 				else
 				{
