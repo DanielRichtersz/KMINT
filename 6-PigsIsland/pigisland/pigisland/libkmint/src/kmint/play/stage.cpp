@@ -34,26 +34,36 @@ void check_interactions(ForwardIt begin, ForwardIt end) {
 
 void stage::act(delta_time dt) {
   // system("CLS");
-  //std::cout << "---------------------------------------------------" << std::endl;
+  // std::cout << "---------------------------------------------------" <<
+  // std::endl;
   check_interactions(begin(), end());
 
   for (actor &a : *this) {
     if (a.GetActorType() == ActorType::Shark) {
       pigisland::shark &sharkActor = dynamic_cast<pigisland::shark &>(a);
       if (&sharkActor != nullptr) {
-        _finiteStateMachine.SetSharkDestination(&sharkActor)
-            ->Execute(&sharkActor);
+
+        pigisland::SharkBaseState *sharkBaseState =
+            _finiteStateMachine.SetSharkDestination(&sharkActor);
+        if (sharkBaseState != nullptr) {
+          sharkBaseState->Execute(&sharkActor);
+        }
       }
     }
 
     if (a.GetActorType() == ActorType::Boat) {
       pigisland::boat &boatActor = dynamic_cast<pigisland::boat &>(a);
       if (&boatActor != nullptr) {
-        _finiteStateMachine.SetBoatDestination(&boatActor)->Execute(&boatActor);
+        pigisland::BoatBaseState *boatBaseState =
+            _finiteStateMachine.SetBoatDestination(&boatActor);
+        if (boatBaseState != nullptr) {
+          boatBaseState->Execute(&boatActor);
+        }
       }
     }
     a.act(dt);
   }
+
   std::for_each(begin(), end(), [](actor &a) {
     a.empty_collisions();
     a.empty_perceived();

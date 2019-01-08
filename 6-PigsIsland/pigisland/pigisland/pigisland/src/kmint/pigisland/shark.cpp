@@ -17,9 +17,13 @@ namespace kmint {
 
 			for (auto &itr = begin_perceived(); itr != end_perceived(); ++itr)
 			{
-
 				if (itr->incorporeal())
 				{
+					if (math::distance(location(), itr->location()) < 16)
+					{
+						itr->kill();
+					}
+
 					itr->FleeLocation(&location());
 				}
 

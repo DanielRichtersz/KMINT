@@ -3,18 +3,25 @@
 
 #include "SharkStateConditions.hpp"
 #include "BoatStateConditions.hpp"
+#include "boat.hpp"
 
 namespace kmint {
 	namespace pigisland {
 		class FiniteStateMachine {
 		public:
-			explicit FiniteStateMachine() 
+			explicit FiniteStateMachine()
 			{
 
 			}
 
-			BoatBaseState* SetBoatDestination(kmint::play::map_bound_actor* actor) { return _boatStateConditions.GetBoatState(actor); }
-			SharkBaseState* SetSharkDestination(kmint::play::map_bound_actor* actor) { return _sharkStateConditions.GetSharkState(actor); }
+			BoatBaseState* SetBoatDestination(kmint::play::map_bound_actor* actor)
+			{
+				return _boatStateConditions.GetBoatState(actor);
+			}
+			SharkBaseState* SetSharkDestination(kmint::play::map_bound_actor* actor)
+			{
+				return _sharkStateConditions.GetSharkState(actor);
+			}
 
 
 		private:

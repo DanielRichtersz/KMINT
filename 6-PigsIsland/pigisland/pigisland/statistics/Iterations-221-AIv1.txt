@@ -1,0 +1,1619 @@
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 2 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 3 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Total pigs eaten: 8
+-----
+Generation 4 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 5 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 6 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 7 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 8 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 9 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 10 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 11 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 12 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 13 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 14 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 15 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 16 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Total pigs eaten: 7
+-----
+Generation 17 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 18 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 19 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 20 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 21 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 22 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 23 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 24 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 25 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 26 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 27 created
+-----
+Total pigs eaten: 0
+-----
+Generation 28 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 29 created
+-----
+Total pigs eaten: 0
+-----
+Generation 30 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 31 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 32 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 33 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 34 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Pigs eaten: 12
+Total pigs eaten: 12
+-----
+Generation 35 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 36 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 37 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 38 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 39 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 40 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 41 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 42 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 43 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 44 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 45 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 46 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 47 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 48 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 49 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Total pigs eaten: 9
+-----
+Generation 50 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 51 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 52 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 53 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 54 created
+-----
+Total pigs eaten: 0
+-----
+Generation 55 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 56 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 57 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Total pigs eaten: 10
+-----
+Generation 58 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 59 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Total pigs eaten: 9
+-----
+Generation 60 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 61 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 62 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 63 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 64 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 65 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 66 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 67 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 68 created
+-----
+Total pigs eaten: 0
+-----
+Generation 69 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 70 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 71 created
+-----
+Total pigs eaten: 0
+-----
+Generation 72 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 73 created
+-----
+Total pigs eaten: 0
+-----
+Generation 74 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 75 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 76 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Total pigs eaten: 8
+-----
+Generation 77 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 78 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 79 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 80 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 81 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 82 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 83 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 84 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 85 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 86 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 87 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 88 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 89 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 90 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 91 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 92 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 93 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 94 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 95 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 96 created
+-----
+Total pigs eaten: 0
+-----
+Generation 97 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 98 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 99 created
+-----
+Total pigs eaten: 0
+-----
+Generation 100 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 101 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 102 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 103 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 104 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 105 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 106 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 107 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 108 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 109 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 110 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Total pigs eaten: 10
+-----
+Generation 111 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 112 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 113 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 114 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 115 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 116 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 117 created
+-----
+Total pigs eaten: 0
+-----
+Generation 118 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 119 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 120 created
+-----
+Total pigs eaten: 0
+-----
+Generation 121 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 122 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 123 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 124 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Total pigs eaten: 8
+-----
+Generation 125 created
+-----
+Total pigs eaten: 0
+-----
+Generation 126 created
+-----
+Total pigs eaten: 0
+-----
+Generation 127 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 128 created
+-----
+Total pigs eaten: 0
+-----
+Generation 129 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Pigs eaten: 12
+Pigs eaten: 13
+Total pigs eaten: 13
+-----
+Generation 130 created
+-----
+Total pigs eaten: 0
+-----
+Generation 131 created
+-----
+Total pigs eaten: 0
+-----
+Generation 132 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 133 created
+-----
+Total pigs eaten: 0
+-----
+Generation 134 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 135 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 136 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 137 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 138 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Total pigs eaten: 7
+-----
+Generation 139 created
+-----
+Total pigs eaten: 0
+-----
+Generation 140 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 141 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 142 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 143 created
+-----
+Total pigs eaten: 0
+-----
+Generation 144 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 145 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 146 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Total pigs eaten: 7
+-----
+Generation 147 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 148 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 149 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Total pigs eaten: 7
+-----
+Generation 150 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 151 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 152 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Total pigs eaten: 11
+-----
+Generation 153 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 154 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 155 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 156 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Total pigs eaten: 10
+-----
+Generation 157 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 158 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 159 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 160 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 161 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 162 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 163 created
+-----
+Total pigs eaten: 0
+-----
+Generation 164 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 165 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 166 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 167 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 168 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 169 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 170 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 171 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 172 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 173 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 174 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 175 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 176 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 177 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Pigs eaten: 12
+Total pigs eaten: 12
+-----
+Generation 178 created
+-----
+Total pigs eaten: 0
+-----
+Generation 179 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 180 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 181 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Pigs eaten: 12
+Pigs eaten: 13
+Pigs eaten: 14
+Pigs eaten: 15
+Pigs eaten: 16
+Pigs eaten: 17
+Total pigs eaten: 17
+-----
+Generation 182 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 183 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Total pigs eaten: 10
+-----
+Generation 184 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 185 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 186 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 187 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Total pigs eaten: 8
+-----
+Generation 188 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 189 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Total pigs eaten: 7
+-----
+Generation 190 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 191 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Total pigs eaten: 7
+-----
+Generation 192 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 193 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 194 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 195 created
+-----
+Total pigs eaten: 0
+-----
+Generation 196 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Total pigs eaten: 8
+-----
+Generation 197 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 198 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 199 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Pigs eaten: 10
+Pigs eaten: 11
+Pigs eaten: 12
+Pigs eaten: 13
+Pigs eaten: 14
+Pigs eaten: 15
+Pigs eaten: 16
+Pigs eaten: 17
+Pigs eaten: 18
+Pigs eaten: 19
+Pigs eaten: 20
+Pigs eaten: 21
+Pigs eaten: 22
+Pigs eaten: 23
+Pigs eaten: 24
+Pigs eaten: 25
+Pigs eaten: 26
+Pigs eaten: 27
+Pigs eaten: 28
+Pigs eaten: 29
+Pigs eaten: 30
+Pigs eaten: 31
+Total pigs eaten: 31
+-----
+Generation 200 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 201 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 202 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Pigs eaten: 8
+Pigs eaten: 9
+Total pigs eaten: 9
+-----
+Generation 203 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 204 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Total pigs eaten: 6
+-----
+Generation 205 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 206 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 207 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 208 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Total pigs eaten: 3
+-----
+Generation 209 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 210 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Pigs eaten: 6
+Pigs eaten: 7
+Total pigs eaten: 7
+-----
+Generation 211 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 212 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Pigs eaten: 5
+Total pigs eaten: 5
+-----
+Generation 213 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 214 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 215 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 216 created
+-----
+Total pigs eaten: 0
+-----
+Generation 217 created
+-----
+Total pigs eaten: 0
+-----
+Generation 218 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Total pigs eaten: 2
+-----
+Generation 219 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3
+Pigs eaten: 4
+Total pigs eaten: 4
+-----
+Generation 220 created
+-----
+Pigs eaten: 1
+Total pigs eaten: 1
+-----
+Generation 221 created
+-----
+Pigs eaten: 1
+Pigs eaten: 2
+Pigs eaten: 3

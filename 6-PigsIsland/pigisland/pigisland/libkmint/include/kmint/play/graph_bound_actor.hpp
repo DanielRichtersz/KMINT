@@ -39,7 +39,7 @@ public:
 
     void moveEnduranceEffect() {
       _remainingEndurance =
-          _remainingEndurance <= 0 ? 0 : _remainingEndurance - 10;
+          _remainingEndurance <= 0 ? 0 : _remainingEndurance - 1;
       std::cout << "Endurance: " << _remainingEndurance << std::endl;
     }
 

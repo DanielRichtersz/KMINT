@@ -2,8 +2,6 @@
 #define KMINT_PIGISLAND_SHARKSWIMMINGSTATE_HPP
 #include "node_algorithm.hpp"
 #include "SharkBaseState.hpp"
-#include "kmint/play.hpp"
-#include <iostream>
 namespace kmint
 {
 	namespace pigisland

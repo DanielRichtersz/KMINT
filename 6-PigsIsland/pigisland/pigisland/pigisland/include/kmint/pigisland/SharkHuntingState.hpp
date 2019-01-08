@@ -23,7 +23,7 @@ namespace kmint
 				//For all actors nearby, see if its pig
 				for (auto& it = actor->begin_perceived(); it != actor->end_perceived(); ++it)
 				{
-					if (actor->GetActorType() == play::Pig)
+					if (it->GetActorType() == play::Pig)
 					{
 						//Find nearest node to target location
 						const map::map_node* nearestNodeToLocation = FindNearestNodeToLocation(actor->graph(), it->location());

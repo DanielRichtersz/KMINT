@@ -33,8 +33,11 @@ namespace kmint
 						// If its a boat, flee
 						if (actor->GetActorType() == play::Boat)
 						{
-							//TODO: Flee 10 steps
-							return _finiteStateSource->GetSharkSwimmingState();
+							int distancetoBoat = math::distance(actor->location(), it->location());
+							if (abs(distancetoBoat) < 50)
+							{
+								return _finiteStateSource->GetSharkSwimmingState();
+							}
 						}
 
 						// Else hunt the perceived actor
@@ -42,9 +45,6 @@ namespace kmint
 						return _finiteStateSource->GetSharkHuntingState();
 					}
 				}
-				// Als boat binnen 50 pixels is, retourneer SharkFearedState
-
-				// Als pig binnen 100 pixels i, retourneer SharkHuntingState
 
 				return _finiteStateSource->GetSharkSwimmingState();
 			}
